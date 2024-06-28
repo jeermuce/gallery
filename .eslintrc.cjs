@@ -13,6 +13,7 @@ const config = {
   ],
   rules: {
     "@typescript-eslint/array-type": "off",
+    "@next/next/no-img-element": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/consistent-type-imports": [
       "warn",

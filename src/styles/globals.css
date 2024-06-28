@@ -1,3 +1,162 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+@layer base {
+    :root {
+        --linearPrimarySecondary: linear-gradient(#359AFF, #D32245);
+        --linearPrimaryAccent: linear-gradient(#359AFF, #FFD038);
+        --linearSecondaryAccent: linear-gradient(#D32245, #FFD038);
+        --radialPrimarySecondary: radial-gradient(#359AFF, #D32245);
+        --radialPrimaryAccent: radial-gradient(#359AFF, #FFD038);
+        --radialSecondaryAccent: radial-gradient(#D32245, #FFD038);
+
+        --text-main: #1b1d1d;
+        --background-main: #fafafa;
+        --primary-main: #0066cc;
+        --secondary-main: #dd2c50;
+        --accent-main: #c79800;
+
+        --text-50: #f2f3f3;
+        --text-100: #e4e7e7;
+        --text-200: #cacece;
+        --text-300: #afb6b6;
+        --text-400: #959d9d;
+        --text-500: #7a8585;
+        --text-600: #626a6a;
+        --text-700: #495050;
+        --text-800: #313535;
+        --text-900: #181b1b;
+        --text-950: #0c0d0d;
+
+        --background-50: #f2f2f2;
+        --background-100: #e6e6e6;
+        --background-200: #cccccc;
+        --background-300: #b3b3b3;
+        --background-400: #999999;
+        --background-500: #808080;
+        --background-600: #666666;
+        --background-700: #4d4d4d;
+        --background-800: #333333;
+        --background-900: #1a1a1a;
+        --background-950: #0d0d0d;
+
+        --primary-50: #e5f2ff;
+        --primary-100: #cce5ff;
+        --primary-200: #99ccff;
+        --primary-300: #66b2ff;
+        --primary-400: #3399ff;
+        --primary-500: #007fff;
+        --primary-600: #0066cc;
+        --primary-700: #004c99;
+        --primary-800: #003366;
+        --primary-900: #001933;
+        --primary-950: #000d1a;
+
+        --secondary-50: #fbe9ed;
+        --secondary-100: #f8d3da;
+        --secondary-200: #f1a7b6;
+        --secondary-300: #ea7b91;
+        --secondary-400: #e2506d;
+        --secondary-500: #db2448;
+        --secondary-600: #af1d3a;
+        --secondary-700: #84152b;
+        --secondary-800: #580e1d;
+        --secondary-900: #2c070e;
+        --secondary-950: #160407;
+
+        --accent-50: #fff9e5;
+        --accent-100: #fff3cc;
+        --accent-200: #ffe799;
+        --accent-300: #ffdb66;
+        --accent-400: #ffcf33;
+        --accent-500: #ffc300;
+        --accent-600: #cc9c00;
+        --accent-700: #997500;
+        --accent-800: #664e00;
+        --accent-900: #332700;
+        --accent-950: #1a1400;
+    }
+
+    .dark {
+        --linearPrimarySecondary: linear-gradient(#359AFF, #D32245);
+        --linearPrimaryAccent: linear-gradient(#359AFF, #FFD038);
+        --linearSecondaryAccent: linear-gradient(#D32245, #FFD038);
+        --radialPrimarySecondary: radial-gradient(#359AFF, #D32245);
+        --radialPrimaryAccent: radial-gradient(#359AFF, #FFD038);
+        --radialSecondaryAccent: radial-gradient(#D32245, #FFD038);
+
+        --text-main: #E3E4E4;
+        --background-main: #040404;
+        --primary-main: #359AFF;
+        --secondary-main: #D32245;
+        --accent-main: #FFD038;
+
+        --text-50: #0c0d0d;
+        --text-100: #191a1a;
+        --text-200: #323434;
+        --text-300: #4b4e4e;
+        --text-400: #646868;
+        --text-500: #7d8282;
+        --text-600: #979b9b;
+        --text-700: #b1b4b4;
+        --text-800: #cbcdcd;
+        --text-900: #e5e6e6;
+        --text-950: #f2f3f3;
+
+        --background-50: #0d0d0d;
+        --background-100: #1a1a1a;
+        --background-200: #333333;
+        --background-300: #4d4d4d;
+        --background-400: #666666;
+        --background-500: #808080;
+        --background-600: #999999;
+        --background-700: #b3b3b3;
+        --background-800: #cccccc;
+        --background-900: #e6e6e6;
+        --background-950: #f2f2f2;
+
+        --primary-50: #000d1a;
+        --primary-100: #001933;
+        --primary-200: #003366;
+        --primary-300: #004c99;
+        --primary-400: #0066cc;
+        --primary-500: #007fff;
+        --primary-600: #3399ff;
+        --primary-700: #66b2ff;
+        --primary-800: #99ccff;
+        --primary-900: #cce5ff;
+        --primary-950: #e5f2ff;
+
+        --secondary-50: #160407;
+        --secondary-100: #2c070e;
+        --secondary-200: #580e1d;
+        --secondary-300: #84152b;
+        --secondary-400: #af1d3a;
+        --secondary-500: #db2448;
+        --secondary-600: #e2506d;
+        --secondary-700: #ea7b91;
+        --secondary-800: #f1a7b6;
+        --secondary-900: #f8d3da;
+        --secondary-950: #fbe9ed;
+
+        --accent-50: #1a1400;
+        --accent-100: #332700;
+        --accent-200: #664e00;
+        --accent-300: #997500;
+        --accent-400: #cc9c00;
+        --accent-500: #ffc300;
+        --accent-600: #ffcf33;
+        --accent-700: #ffdb66;
+        --accent-800: #ffe799;
+        --accent-900: #fff3cc;
+        --accent-950: #fff9e5;
+    }
+}
