@@ -14,7 +14,10 @@ function Main() {
 
   return (
     <main className="flex flex-1 flex-col items-center">
-      <div className="grid w-[80%] max-w-[80rem] grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-4 bg-red-500 p-4">
+      <div
+        className="grid w-[80%] max-w-[80rem] grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-4  p-4
+      "
+      >
         {mockurls.map((item) => (
           <Image
             src={item.url ?? "fuck"}

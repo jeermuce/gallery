@@ -35,7 +35,7 @@ function ThemeSwitcher() {
 
   return (
     <button
-      className=" line flex aspect-square items-center justify-center rounded-full bg-text-main p-4  text-background-main"
+      className=" line flex aspect-square items-center justify-center rounded-full bg-text-main p-2  text-background-main"
       onMouseDown={toggleTheme}
     >
       {theme === "light" ? "🌞" : "🌚"}

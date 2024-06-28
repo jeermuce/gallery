@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      boxShadow: {
+        "3xl": "0 10px 100px 15px rgba(0, 0, 0, 0.3)",
+      },
       colors: {
         text: {
           main: "var(--text-main)",

@@ -7,7 +7,12 @@
     padding: 0;
     box-sizing: border-box;
     border-radius: 0;
+    text-align: center;
+    text-anchor: middle;
 }
+
+
+
 
 @layer base {
     :root {
@@ -18,7 +23,7 @@
         --radialPrimaryAccent: radial-gradient(#359AFF, #FFD038);
         --radialSecondaryAccent: radial-gradient(#D32245, #FFD038);
 
-        --text-main: #1b1d1d;
+        --text-main: rgb(27, 29, 29);
         --background-main: #fafafa;
         --primary-main: #0066cc;
         --secondary-main: #dd2c50;
@@ -93,7 +98,7 @@
         --radialPrimaryAccent: radial-gradient(#359AFF, #FFD038);
         --radialSecondaryAccent: radial-gradient(#D32245, #FFD038);
 
-        --text-main: #E3E4E4;
+        --text-main: rgb(227, 228, 228);
         --background-main: #040404;
         --primary-main: #359AFF;
         --secondary-main: #D32245;
