@@ -4,7 +4,7 @@ import Main from "./Main";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col gap-4">
+    <div className="flex flex-col gap-4 min-h-screen">
       <Nav />
       <Main />
       <Footer />
