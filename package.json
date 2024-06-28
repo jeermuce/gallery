@@ -10,10 +10,11 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev": "next dev --turbo",
-    "lint": "bun oxlint --fix --jsdoc-plugin --jest-plugin --vitest-plugin --jsx-a11y-plugin --nextjs-plugin --react-perf-plugin && next lint && eslint . --fix",
+    "lint": "bun oxlint --fix --jsdoc-plugin --jest-plugin --vitest-plugin --jsx-a11y-plugin --nextjs-plugin --react-perf-plugin && next lint . --fix",
     "start": "next start"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.1.6",
     "@t3-oss/env-nextjs": "^0.10.1",
     "drizzle-orm": "^0.30.10",
     "eslint-plugin-oxlint": "^0.4.0",
