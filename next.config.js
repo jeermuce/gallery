@@ -8,6 +8,7 @@ await import("./src/env.js");
 const config = {
   reactStrictMode: true,
   swcMinify: true,
+  images: { unoptimized: true },
   typescript: {
     ignoreBuildErrors: true,
   },
