@@ -28,6 +28,7 @@
         --primary: rgb(23, 85, 118);
         --secondary: rgb(159, 20, 20);
         --accent: rgb(255, 240, 154);
+        --accent-opacity: rgba(255, 240, 154, 0.5);
 
         --text-50: rgb(242, 242, 242);
         --text-100: rgb(230, 230, 230);

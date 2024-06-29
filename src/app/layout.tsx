@@ -22,7 +22,7 @@ export default function RootLayout({
           lang="en"
           className={`${GeistSans.variable} bg-background h-screen`}
         >
-          <body className="flex min-h-screen flex-col">{children}</body>
+          <body className="flex flex-col min-h-screen">{children}</body>
         </html>
       </ClerkProvider>
     </React.StrictMode>
