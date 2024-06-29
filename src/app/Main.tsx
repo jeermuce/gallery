@@ -16,7 +16,22 @@ async function Main() {
       uploadedAt: item.uploadedAt,
     };
   });
-  mockurls = [...mockurls, ...mockurls, ...mockurls];
+  mockurls = [
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+    ...mockurls,
+  ];
   return (
     <main className="flex flex-1 flex-col items-center">
       <div
@@ -26,7 +41,7 @@ async function Main() {
         {posts.map((item) => (
           <div
             key={`${Math.floor(Math.random() * 999999)}`}
-            className={`flex  aspect-video w-full transform cursor-pointer  items-center justify-center  rounded-2xl bg-background-main object-cover  text-text-main transition-transform duration-500 ease-in-out hover:top-0  hover:scale-150  `}
+            className={`bg-background  text-text flex aspect-video w-full  transform cursor-pointer  items-center justify-center rounded-2xl  object-cover transition-transform duration-500 ease-in-out hover:top-0  hover:scale-150  `}
           >
             <h1>{item.name}</h1>
           </div>
@@ -45,7 +60,7 @@ async function Main() {
               unoptimized
               width={0}
               height={0}
-              className={`aspect-video w-full  transform cursor-pointer rounded-2xl object-cover  transition-transform duration-500 ease-in-out hover:top-0 hover:scale-150  hover:rounded-none  `}
+              className={`aspect-video w-full transform cursor-pointer rounded-2xl object-cover transition-all duration-200 ease-in-out hover:scale-150  hover:drop-shadow-[0_2px_3px_var(--accent)]  `}
             />
           </Link>
         ))}

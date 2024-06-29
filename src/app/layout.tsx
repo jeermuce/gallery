@@ -20,9 +20,9 @@ export default function RootLayout({
       <ClerkProvider>
         <html
           lang="en"
-          className={`${GeistSans.variable} h-screen bg-background-main`}
+          className={`${GeistSans.variable} bg-background h-screen`}
         >
-          <body className="flex flex-col min-h-screen">{children}</body>
+          <body className="flex min-h-screen flex-col">{children}</body>
         </html>
       </ClerkProvider>
     </React.StrictMode>
