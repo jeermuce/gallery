@@ -2,81 +2,61 @@
   {
     "name": "3d-tech.jpg",
     "key": "494e3032-dcbf-4dcb-9e6e-41b701210dc6-fbd1le.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/494e3032-dcbf-4dcb-9e6e-41b701210dc6-fbd1le.jpg",
-    "size": 253026,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 253026
   },
   {
     "name": "astronaut_jellyfish.jpg",
     "key": "31f2e624-69b9-4d70-a595-fd62b3e615ae-lqwrw8.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/31f2e624-69b9-4d70-a595-fd62b3e615ae-lqwrw8.jpg",
-    "size": 415639,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 415639
   },
   {
     "name": "blue_night_moon_over_lake.jpg",
     "key": "7fc67a6c-ee0a-422e-afb7-692defda7ba6-hrmm20.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/7fc67a6c-ee0a-422e-afb7-692defda7ba6-hrmm20.jpg",
-    "size": 865165,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 865165
   },
   {
     "name": "city_bridge.jpg",
     "key": "19fda8fb-0915-4c7c-9629-6a673402f3b4-q4bx7h.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/19fda8fb-0915-4c7c-9629-6a673402f3b4-q4bx7h.jpg",
-    "size": 1493097,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 1493097
   },
   {
     "name": "adwaita-d.jpg",
     "key": "2ef2b629-f334-49f4-93f1-75e18c1f3714-187isg.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/2ef2b629-f334-49f4-93f1-75e18c1f3714-187isg.jpg",
-    "size": 1516555,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 1516555
   },
   {
     "name": "building_cyber.jpg",
     "key": "b01534a0-2e26-42a0-893d-3f65abe1a29f-i1tjwu.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/b01534a0-2e26-42a0-893d-3f65abe1a29f-i1tjwu.jpg",
-    "size": 1631061,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 1631061
   },
   {
     "name": "aesthetic_deer.jpg",
     "key": "590349e2-ca1c-42c2-a60e-bb4f602d3cbe-erb5bz.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/590349e2-ca1c-42c2-a60e-bb4f602d3cbe-erb5bz.jpg",
-    "size": 2329147,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 2329147
   },
   {
     "name": "adwaita-l.jpg",
     "key": "3f06789b-c510-47f0-a99a-18135be177b1-187iso.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/3f06789b-c510-47f0-a99a-18135be177b1-187iso.jpg",
-    "size": 2447092,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 2447092
   },
   {
     "name": "calder-moore-aliencrack-01-copy.jpg",
     "key": "9c6f3093-24f4-42f5-b5af-31eca476f3c3-202ywu.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/9c6f3093-24f4-42f5-b5af-31eca476f3c3-202ywu.jpg",
-    "size": 2512323,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 2512323
   },
   {
     "name": "celebration-winter-nights.jpg",
     "key": "861f1963-44d3-458d-8258-2f369306eac9-sj07r4.jpg",
-    "customId": null,
     "url": "https://uploadthing-prod-sea1.s3.us-west-2.amazonaws.com/861f1963-44d3-458d-8258-2f369306eac9-sj07r4.jpg",
-    "size": 3504514,
-    "uploadedAt": "2024-06-28T01:59:31.000Z"
+    "size": 3504514
   }
 ]
