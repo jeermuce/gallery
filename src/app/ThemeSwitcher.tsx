@@ -35,10 +35,10 @@ function ThemeSwitcher() {
 
   return (
     <button
-      className="flex justify-center items-center p-2 rounded-full line aspect-square bg-text-main text-background-main"
+      className="line flex aspect-square items-center justify-center rounded-full bg-text-main p-2 text-background-main"
       onMouseDown={toggleTheme}
     >
-      {theme === "light" ? "🌞" : "🌚"}
+      {theme === "light" ? "Wight" : "Dawk"}
     </button>
   );
 }

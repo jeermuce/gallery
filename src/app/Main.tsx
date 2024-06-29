@@ -1,8 +1,13 @@
 import React from "react";
 import mockdata from "../../assets/mockdata.json" assert { type: "json" };
 import Image from "next/image";
+import { db } from "~/server/db";
+import Link from "next/link";
 
-function Main() {
+async function Main() {
+  const posts = await db.query.posts.findMany();
+
+  console.log(posts);
   let mockurls = mockdata.map((item) => {
     return {
       url: item.url,
@@ -13,21 +18,36 @@ function Main() {
   });
   mockurls = [...mockurls, ...mockurls, ...mockurls];
   return (
-    <main className="flex flex-col flex-1 items-center">
+    <main className="flex flex-1 flex-col items-center">
       <div
-        className="grid w-[80%] max-w-[80rem] grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-2
+        className="grid w-[80%]  max-w-[80rem] grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-2
    "
       >
+        {posts.map((item) => (
+          <div
+            key={`${Math.floor(Math.random() * 999999)}`}
+            className={`flex  aspect-video w-full transform cursor-pointer  items-center justify-center  rounded-2xl bg-background-main object-cover  text-text-main transition-transform duration-500 ease-in-out hover:top-0  hover:scale-150  `}
+          >
+            <h1>{item.name}</h1>
+          </div>
+        ))}
         {mockurls.map((item) => (
-          <Image
-            src={item.url ?? "fuck"}
-            key={item.key}
-            alt={item.name}
-            unoptimized
-            width={0}
-            height={0}
-            className="object-cover w-full rounded-2xl aspect-square"
-          />
+          <Link
+            href={item.url ?? "ERROR"}
+            key={`${item.key + Math.floor(Math.random() * 999999)}`}
+            target="_blank"
+            className="hover:z-10"
+          >
+            <Image
+              src={item.url ?? "ERROR"}
+              key={`${item.key + Math.floor(Math.random() * 999999)}`}
+              alt={item.name}
+              unoptimized
+              width={0}
+              height={0}
+              className={`aspect-video w-full  transform cursor-pointer rounded-2xl object-cover  transition-transform duration-500 ease-in-out hover:top-0 hover:scale-150  hover:rounded-none  `}
+            />
+          </Link>
         ))}
       </div>
     </main>
