@@ -1,24 +1,28 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-export default {
-  content: ["./src/**/*.tsx"],
+import { withUt } from "uploadthing/tw";
+
+export default withUt({
+  content: ["./src/**/*.{ts,tsx,mdx}"],
   theme: {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
       dropShadow: {
-        "3xl": "0 0px 35px var(--accent-opacity)",
-        "4xl": [
-          "0 35px 35px rgba(0, 0, 0, 0.25)",
-          "0 45px 65px rgba(0, 0, 0, 0.15)",
-        ],
+        Prem: "0 0px 1rem var(--primary-opacity)",
+        Arem: "0 0px 1rem var(--accent-opacity)",
+        Srem: "0 0px 1rem var(--secondary-opacity)",
+        Frem: "0 0px 0.5rem var(--secondary-opacity)",
       },
 
       colors: {
         text: {
-          DEFAULT: "var(--text)",
+          DEFAULT: {
+            DEFAULT: "var(--text)",
+            opacity: "var(--text-opacity)",
+          },
           100: "var(--text-100)",
           200: "var(--text-200)",
           300: "var(--text-300)",
@@ -31,7 +35,10 @@ export default {
           950: "var(--text-950)",
         },
         background: {
-          DEFAULT: "var(--background)",
+          DEFAULT: {
+            DEFAULT: "var(--background)",
+            opacity: "var(--background-opacity)",
+          },
           100: "var(--background-100)",
           200: "var(--background-200)",
           300: "var(--background-300)",
@@ -44,7 +51,10 @@ export default {
           950: "var(--background-950)",
         },
         primary: {
-          DEFAULT: "var(--primary)",
+          DEFAULT: {
+            DEFAULT: "var(--primary)",
+            opacity: "var(--primary-opacity)",
+          },
           100: "var(--primary-100)",
           200: "var(--primary-200)",
           300: "var(--primary-300)",
@@ -57,7 +67,10 @@ export default {
           950: "var(--primary-950)",
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
+          DEFAULT: {
+            DEFAULT: "var(--secondary)",
+            opacity: "var(--secondary-opacity)",
+          },
           100: "var(--secondary-100)",
           200: "var(--secondary-200)",
           300: "var(--secondary-300)",
@@ -70,8 +83,10 @@ export default {
           950: "var(--secondary-950)",
         },
         accent: {
-          OPACITY: "var(--accent-opacity)",
-          DEFAULT: "var(--accent)",
+          DEFAULT: {
+            opacity: "var(--accent-opacity)",
+            DEFAULT: "var(--accent)",
+          },
           100: "var(--accent-100)",
           200: "var(--accent-200)",
           300: "var(--accent-300)",
@@ -85,9 +100,9 @@ export default {
         },
       },
       backgroundImage: {
-        "linear-primary-secondary": "var(--linearPrimarySecondary)",
+        "animated-background": ".animated-background",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config);
