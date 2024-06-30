@@ -100,11 +100,12 @@
         --radialPrimaryAccent: radial-gradient(rgb(23, 85, 118), rgb(255, 240, 154));
         --radialSecondaryAccent: radial-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
 
-        --text: rgb(10, 10, 10);
-        --background: rgb(245, 245, 245);
-        --primary: rgb(23, 85, 118);
-        --secondary: rgb(255, 240, 154);
-        --accent: rgb(159, 20, 20);
+        --text: rgb(245, 245, 245);
+        --background: rgb(10, 10, 10);
+        --secondary: rgb(23, 85, 118);
+        --primary: rgb(159, 20, 20);
+        --accent: rgb(255, 240, 154);
+        --accent-opacity: rgba(255, 240, 154, 0.5);
 
         --text-50: rgb(242, 242, 242);
         --text-100: rgb(230, 230, 230);

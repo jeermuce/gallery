@@ -35,7 +35,7 @@ function ThemeSwitcher() {
 
   return (
     <button
-      className="flex justify-center items-center p-2 rounded-full line bg-text text-background aspect-square"
+      className="line flex aspect-square w-12 items-center justify-center rounded-full bg-secondary p-2 font-bold text-accent"
       onMouseDown={toggleTheme}
     >
       {theme === "light" ? "Wight" : "Dawk"}
