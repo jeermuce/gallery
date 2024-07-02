@@ -10,7 +10,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 
 export const metadata = {
-  title: "Gallery",
+  title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
