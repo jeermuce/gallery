@@ -10,6 +10,15 @@ const config = {
   swcMinify: true,
   images: {
     unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+    //unoptimized: true,
+
     domains: ["utfs.io", "uploadthing-prod-sea1.s3.us-west-2.amazonaws.com"],
   },
   typescript: {

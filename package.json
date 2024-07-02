@@ -10,7 +10,6 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev": "next dev --turbo",
-    "helwless": "echo helwless",
     "lint": "watchexec --timings -q -r -c  -- bun oxlint --fix --jsdoc-plugin --jest-plugin --vitest-plugin --jsx-a11y-plugin --nextjs-plugin --react-perf-plugin && next lint . --fix && rustywind --write .",
     "start": "next start"
   },
