@@ -1,12 +1,12 @@
 import "~/styles/globals.css";
 
-import React from "react";
-import { GeistSans } from "geist/font/sans";
 import { ClerkProvider } from "@clerk/nextjs";
-import Nav from "~/app/_components/Nav";
-import Footer from "~/app/_components/Footer";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { GeistSans } from "geist/font/sans";
+import React from "react";
 import { extractRouterConfig } from "uploadthing/server";
+import Footer from "~/app/_components/Footer";
+import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 
 export const metadata = {
