@@ -7,12 +7,12 @@ export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   return (
-    <main className="flex flex-1 flex-row items-start justify-center bg-background py-4 ">
+    <main className="flex flex-row flex-1 justify-center items-start py-4 bg-background">
       <SignedIn>
         <Gallery />
       </SignedIn>
       <SignedOut>
-        <div className="mx-4 flex flex-col items-center justify-center gap-8 text-text">
+        <div className="flex flex-col gap-8 justify-center items-center mx-4 text-text">
           <h1 className="text-3xl font-bold">
             Welcome to {process.env.NEXT_PUBLIC_SITE_NAME}
           </h1>

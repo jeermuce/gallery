@@ -26,7 +26,7 @@ function UploadThing() {
   return (
     <>
       {viewportWidth > 1343 ? (
-        <div className="popping-on-right-until-no-longer-fitting rounded-2xl">
+        <div className="rounded-2xl popping-on-right-until-no-longer-fitting">
           <UploadDropzone
             onClientUploadComplete={() => router.refresh()}
             appearance={{

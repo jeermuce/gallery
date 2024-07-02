@@ -28,16 +28,16 @@ function Nav() {
     };
   }, []);
   return (
-    <nav className="navbar sticky left-0 top-0 z-[9999] flex h-fit w-full flex-row justify-center bg-transparent text-text drop-shadow-Srem backdrop-blur-[20px]">
+    <nav className="flex sticky top-0 left-0 flex-row justify-center w-full bg-transparent navbar z-[9999] h-fit text-text drop-shadow-Srem backdrop-blur-[20px]">
       <div className="  flex w-[80%] max-w-[80rem] flex-row flex-nowrap items-center justify-between gap-8  py-2 font-semibold">
         <Link href="/">Home</Link>
         {viewportWidth > 542 ? (
-          <div className="flex flex-row flex-nowrap justify-center gap-8">
+          <div className="flex flex-row flex-nowrap gap-8 justify-center">
             <Link href="/dashboard">Dashboard</Link>
             <Link href="/forum">Forum</Link>
           </div>
         ) : null}
-        <div className="flex flex-row flex-nowrap items-center justify-center gap-8">
+        <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
           {viewportWidth < 1344 && viewportWidth > 542 ? (
             <SignedIn>
               <UploadButton

@@ -3,7 +3,7 @@ import BurgerMenuOpen from "./BurgerMenuOpen";
 const BurgerMenuClosed = () => {
   const [openBurger, setopenBurger] = useState(false);
   return (
-    <div className=" line relative flex aspect-square w-12 items-center justify-center rounded-full bg-background p-2 font-bold text-text">
+    <div className="flex relative justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-background text-text">
       <button
         className="burger-menu-button"
         onMouseDown={() => setopenBurger(!openBurger)}
