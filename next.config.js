@@ -8,7 +8,10 @@ await import("./src/env.js");
 const config = {
   reactStrictMode: true,
   swcMinify: true,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    domains: ["utfs.io", "uploadthing-prod-sea1.s3.us-west-2.amazonaws.com"],
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

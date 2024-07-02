@@ -21,9 +21,8 @@ async function Gallery() {
             src={item.url ?? "ERROR"}
             key={`${item.key}`}
             alt={item.name}
-            unoptimized
-            width={0}
-            height={0}
+            width={100}
+            height={100}
             className={`
               aspect-video
               w-full 
