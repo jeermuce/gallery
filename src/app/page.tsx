@@ -1,5 +1,5 @@
 import React from "react";
-import { SignedIn, SignedOut,  } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Gallery from "~/app/_components/Gallery";
 import MySignInButton from "./_components/MySignInButton";
 
@@ -12,8 +12,10 @@ export default async function HomePage() {
         <Gallery />
       </SignedIn>
       <SignedOut>
-        <div className="flex flex-col items-center justify-center text-text">
-          <h1 className="text-3xl font-bold">Welcome to Clerk</h1>
+        <div className="mx-4 flex flex-col items-center justify-center gap-8 text-text">
+          <h1 className="text-3xl font-bold">
+            Welcome to {process.env.NEXT_PUBLIC_SITE_NAME}
+          </h1>
           <p className="text-lg">
             Sign in to view your photos. You can create a new account or sign in
             with an existing one.
