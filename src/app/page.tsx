@@ -1,6 +1,7 @@
 import React from "react";
-import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut,  } from "@clerk/nextjs";
 import Gallery from "~/app/_components/Gallery";
+import MySignInButton from "./_components/MySignInButton";
 
 export const dynamic = "force-dynamic";
 
@@ -17,9 +18,7 @@ export default async function HomePage() {
             Sign in to view your photos. You can create a new account or sign in
             with an existing one.
           </p>
-          <SignInButton>
-            <h1 className="text-3xl font-bold">Sign In</h1>
-          </SignInButton>
+          <MySignInButton />
         </div>
       </SignedOut>
     </main>

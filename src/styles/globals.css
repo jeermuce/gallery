@@ -100,7 +100,7 @@ body {
         --text-opacity: rgba(245, 245, 245, 0.5);
         --background: #0a0a0a;
         --background-opacity: rgba(10, 10, 10, 0.5);
-        --primary: rgb(23, 85, 118);
+        --primary: rgb(48, 146, 199);
         --primary-opacity: rgba(23, 85, 118, 0.5);
         --secondary: rgb(159, 20, 20);
         --secondary-opacity: rgba(159, 20, 20, 0.5);
@@ -182,11 +182,11 @@ body {
         --text: rgb(10, 10, 10);
         --text-opacity: rgba(10, 10, 10, 0.5);
 
-        --secondary: rgb(23, 85, 118);
+        --secondary: rgb(48, 146, 199);
         --secondary-opacity: rgba(23, 85, 118, 0.5);
 
-        --primary: rgb(159, 20, 20);
-        --primary-opacity: rgba(159, 20, 20, 0.5);
+        --primary: rgb(255, 108, 108);
+        --primary-opacity: rgba(255, 59, 59, 0.5);
 
         --accent: rgb(19, 18, 12);
         --accent-opacity: rgba(19, 18, 12, 0.5);
