@@ -59,10 +59,10 @@ function Nav() {
             </SignedIn>
           ) : null}
           <ThemeSwitcher />
-          {viewportWidth < 542 ? <BurgerMenuClosed /> : null}
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
+          <SignedIn>
+            {viewportWidth < 542 ? <BurgerMenuClosed /> : null}
+          </SignedIn>
+
           {viewportWidth > 542 ? (
             <SignedIn>
               <UserButton />
