@@ -84,7 +84,7 @@ async function Gallery() {
     ...images,
   ];
   return (
-    <div className=" relative grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 p-6">
+    <div className=" relative grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 px-4 ">
       {imanges.map((item) => (
         <Link
           href={item?.url ?? "ERROR"}
