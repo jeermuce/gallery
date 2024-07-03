@@ -8,83 +8,10 @@ import UploadThing from "./UploadThing";
 async function Gallery() {
   const images = await getImages();
   //empty
-  const imanges = [
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-    ...images,
-  ];
+
   return (
     <div className=" relative grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 px-4 ">
-      {imanges.map((item) => (
+      {images.map((item) => (
         <Link
           href={item?.url ?? "ERROR"}
           key={`${item?.key}`}
@@ -95,14 +22,14 @@ async function Gallery() {
             src={item?.url ?? "ERROR"}
             key={`${item?.key}`}
             alt={item?.name ?? "ERROR"}
-            width={100}
-            height={100}
+            width={250}
+            height={250}
+            style={{ objectFit: "cover" }}
             className={`
               aspect-video
               w-full 
               transform cursor-pointer 
               rounded-2xl 
-              object-cover 
               transition-all 
               duration-[200ms] 
               ease-in-out

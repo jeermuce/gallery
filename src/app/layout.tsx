@@ -13,7 +13,11 @@ export const metadata = {
   description: "Image Gallery",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
-
+export const viewport = {
+  width: 1,
+  height: 1,
+  themeColor: "dark",
+};
 type BaseThemeTaggedType = {
   __type: "prebuilt_appearance";
 };
