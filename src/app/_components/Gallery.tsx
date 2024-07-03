@@ -8,19 +8,94 @@ async function Gallery() {
   const images = await db.query.images.findMany({
     orderBy: (model, { desc }) => desc(model.createdAt),
   });
+  //empty
+  const imanges = [
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+  ];
   return (
-    <div className="gallery-container grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 p-6">
-      {images.map((item) => (
+    <div className=" relative grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 p-6">
+      {imanges.map((item) => (
         <Link
-          href={item.url ?? "ERROR"}
-          key={`${item.key}`}
+          href={item?.url ?? "ERROR"}
+          key={`${item?.key}`}
           target="_blank"
           className="hover:z-10"
         >
           <Image
-            src={item.url ?? "ERROR"}
-            key={`${item.key}`}
-            alt={item.name}
+            src={item?.url ?? "ERROR"}
+            key={`${item?.key}`}
+            alt={item?.name ?? "ERROR"}
             width={100}
             height={100}
             className={`
@@ -39,6 +114,7 @@ async function Gallery() {
           />
         </Link>
       ))}
+
       <UploadThing />
     </div>
   );

@@ -2,7 +2,7 @@
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
 import { pgTableCreator } from "drizzle-orm/pg-core";
-export { images } from "./models/images";
+export { images } from "./images/images";
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same

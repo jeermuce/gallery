@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { useEffect, useState } from "react";
 
 function ThemeSwitcher() {
@@ -39,7 +38,7 @@ function ThemeSwitcher() {
       className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-secondary text-accent"
       onMouseDown={toggleTheme}
     >
-      {theme === "light" ? "Wight" : "Dawk"}
+      {theme}
     </button>
   );
 }

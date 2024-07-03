@@ -1,5 +1,4 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import React from "react";
 import Gallery from "~/app/_components/Gallery";
 import MySignInButton from "./_components/MySignInButton";
 

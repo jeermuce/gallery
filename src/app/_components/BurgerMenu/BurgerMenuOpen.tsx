@@ -2,16 +2,15 @@
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
 import { UploadButton } from "~/utils/uploadthing";
 
 function BurgerMenuOpen() {
   const router = useRouter();
   return (
-    <div className="burger-menu-open z-999 absolute -right-0 bottom-[-466%] overflow-hidden  rounded-b-2xl  backdrop-blur-3xl ">
+    <div className="burger-menu-open z-999 absolute -right-0 bottom-[-466%] overflow-clip  rounded-b-2xl  backdrop-blur-3xl ">
       <div className="flex flex-col gap-1 justify-between items-end p-4 w-full h-full font-extrabold burger-menu-contents z-[999] bg-text text-background">
         <SignedIn>
-          <UserButton />
+          <UserButton appearance={{}} />
         </SignedIn>
         <Link href="/">Home</Link>
         <Link href="/dashboard">Dashboard</Link>

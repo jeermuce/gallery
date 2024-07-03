@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { UploadDropzone } from "~/utils/uploadthing";
 
 function UploadThing() {
@@ -26,7 +26,7 @@ function UploadThing() {
   return (
     <>
       {viewportWidth > 1343 ? (
-        <div className="rounded-2xl popping-on-right-until-no-longer-fitting">
+        <div className="absolute rounded-2xl top-[1.5rem] right-[-174px]">
           <UploadDropzone
             onClientUploadComplete={() => router.refresh()}
             appearance={{

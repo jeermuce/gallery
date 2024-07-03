@@ -1,8 +1,8 @@
 "use client";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
 import { UploadButton } from "~/utils/uploadthing";
 import BurgerMenuClosed from "./BurgerMenu/BurgerMenuClosed";
