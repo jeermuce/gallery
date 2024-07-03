@@ -1,8 +1,17 @@
+#![allow(unused)]
 use std::env;
 use std::process::{Command, Child};
 use std::fs;
 use std::time::{Duration, SystemTime};
 use std::thread::sleep;
+
+// ANSI color codes
+const RESET: &str = "\x1b[0m";
+const YELLOW: &str = "\x1b[33m";
+const RED: &str = "\x1b[31m";
+const GREEN: &str = "\x1b[32m";
+const BLUE: &str = "\x1b[34m";
+const WHITE: &str = "\x1b[37m";
 
 fn main() {
     let mut is_unsafe = false;
@@ -13,22 +22,30 @@ fn main() {
     let mut i = 1;
     while i < args.len() {
         match args[i].as_str() {
-            "-u" | "--unsafe" => is_unsafe = true,
+            "-u" | "--unsafe" => {
+                is_unsafe = true;
+                eprintln!("{}Warn: Running in unsafe mode{}", YELLOW, RESET);
+            }
             "-p" | "--path" => {
                 if i + 1 < args.len() {
                     path = args[i + 1].clone();
+                    eprintln!("{}Warn: Using path {}{}", YELLOW, path, RESET);
                     i += 1;
                 } else {
-                    eprintln!("Error: --path option requires an argument");
+                    eprintln!("{}Error: --path option requires an argument{}", RED, RESET);
                     return;
                 }
             }
             _ => {
-                eprintln!("Error: Unrecognized option {}", args[i]);
+                eprintln!("{}Error: Unrecognized option {}{}", RED, args[i], RESET);
                 return;
             }
         }
         i += 1;
+    }
+
+    if path == "." && !args.contains(&"-p".to_string()) && !args.contains(&"--path".to_string()) {
+        eprintln!("{}Warn: No path provided, using default path: {}{}", YELLOW, path, RESET);
     }
 
     let mut child = execute_command_in_background(is_unsafe, &path);

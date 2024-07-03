@@ -9,7 +9,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    "lint": "rust-script lint.rs -u -p ./src/ ",
+    "lint": "rust-script lint.rs -p ./src/ ",
     "dev": "next dev --turbo",
     "start": "next start"
   },
