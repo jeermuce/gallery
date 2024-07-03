@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { type FileRouter, createUploadthing } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { db } from "~/server/db";
-import { images } from "~/server/db/images/images";
+import { images } from "~/server/db/schema";
 
 const f = createUploadthing();
 
@@ -28,7 +28,7 @@ export const ourFileRouter = {
         size: file.size,
         key: file.key,
         url: file.url,
-        customId: null,
+        userId: metadata.userId,
         createdAt: new Date(),
         updatedAt: new Date(),
       });
