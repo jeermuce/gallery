@@ -7,7 +7,7 @@ export default async function PhotoModal(props: { id: number }) {
   return (
     <div className="max-w-[80rem] items-center flex h-full w-fit bg-background text-text ">
       <div className="max-w-[80rem] items-center flex h-full w-full bg-background text-text">
-        <div className="flex-shrink flex flex-col">
+        <div className="flex-shrink flex flex-col border-r border-secondary ">
           <a href={image?.url ?? "ERROR"} rel="noreferrer" target="_blank">
             <img
               src={image?.url ?? "ERROR"}
@@ -17,7 +17,14 @@ export default async function PhotoModal(props: { id: number }) {
             />
           </a>
         </div>
-        <div className="flex-shrink-0 w-48 flex flex-col">
+        <div className="flex-shrink-0 h-full p-4 gap-4 box-border bg-primary flex flex-col items-start justify-start">
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
+          <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
           <h1 className="text-xl font-bold">{image?.name ?? "ERROR"}</h1>
         </div>
       </div>
