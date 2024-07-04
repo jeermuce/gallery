@@ -15,8 +15,7 @@ async function Gallery() {
         <Link
           href={`/img/${item?.id}`}
           key={`${item?.key}`}
-          className="relative hover:z-50 min-w-full max-h- overflow-visible
-          "
+          className="overflow-visible relative min-w-full hover:z-50 max-h-"
         >
           <Image
             src={item?.url ?? "ERROR"}

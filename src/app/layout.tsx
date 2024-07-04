@@ -51,7 +51,7 @@ export default function RootLayout({
               routerConfig={extractRouterConfig(ourFileRouter)}
             />
             <Nav />
-            <main className=" child:bg-red-600 bg-background text-text flex flex-row flex-1 justify-center items-start ">
+            <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
               {children}
               {modal}
               <div id="modal-root" />

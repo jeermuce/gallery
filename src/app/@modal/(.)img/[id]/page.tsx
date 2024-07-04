@@ -1,7 +1,7 @@
-import { getImage } from "~/server/db/queries";
-import { Modal } from "./modal";
 import Image from "next/image";
 import Link from "next/link";
+import { getImage } from "~/server/db/queries";
+import { Modal } from "./modal";
 
 export default async function PhotoModal({
   params: { id: photoId },

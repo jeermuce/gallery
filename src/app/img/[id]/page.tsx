@@ -14,7 +14,7 @@ export default async function PhotoPage({
     <Link
       href={image?.url ?? "ERROR"}
       target="_blank"
-      className="card w-[80%] flex flex-col items-center justify-center "
+      className="card w-fit flex flex-col items-center justify-center "
     >
       <Image
         src={image?.url ?? "ERROR"}
