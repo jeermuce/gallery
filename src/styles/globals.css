@@ -110,11 +110,11 @@ body {
 
 @layer base {
     :root {
-        --linearPrimarySecondary: linear-gradient(rgb(23, 85, 118), rgb(159, 20, 20));
-        --linearPrimaryAccent: linear-gradient(rgb(23, 85, 118), rgb(255, 240, 154));
+        --linearPrimarySecondary: linear-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
+        --linearPrimaryAccent: linear-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --linearSecondaryAccent: linear-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
-        --radialPrimarySecondary: radial-gradient(rgb(23, 85, 118), rgb(159, 20, 20));
-        --radialPrimaryAccent: radial-gradient(rgb(23, 85, 118), rgb(255, 240, 154));
+        --radialPrimarySecondary: radial-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
+        --radialPrimaryAccent: radial-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --radialSecondaryAccent: radial-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
 
         --text: #E4E4E4;
@@ -122,10 +122,10 @@ body {
         --background: #040404;
         --background-opacity: #04040480;
         --primary: rgb(48, 146, 199);
-        --primary-opacity: rgba(23, 85, 118, 0.1);
+        --primary-opacity: rgba(48, 146, 199, 0.1);
         --secondary: rgb(159, 20, 20);
         --secondary-opacity: rgba(159, 20, 20, 0.1);
-        --accent: #fff09a;
+        --accent: rgb(255, 240, 154);
         --accent-opacity: rgba(255, 240, 154, 0.1);
 
         --text-50: rgb(242, 242, 242);
@@ -192,11 +192,11 @@ body {
 
 
     .light {
-        --linearPrimarySecondary: linear-gradient(rgb(23, 85, 118), rgb(159, 20, 20));
-        --linearPrimaryAccent: linear-gradient(rgb(23, 85, 118), rgb(255, 240, 154));
+        --linearPrimarySecondary: linear-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
+        --linearPrimaryAccent: linear-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --linearSecondaryAccent: linear-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
-        --radialPrimarySecondary: radial-gradient(rgb(23, 85, 118), rgb(159, 20, 20));
-        --radialPrimaryAccent: radial-gradient(rgb(23, 85, 118), rgb(255, 240, 154));
+        --radialPrimarySecondary: radial-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
+        --radialPrimaryAccent: radial-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --radialSecondaryAccent: radial-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
 
         --background: #e4e4e4;
@@ -205,10 +205,10 @@ body {
         --text-opacity: #04040480;
 
         --secondary: rgb(48, 146, 199);
-        --secondary-opacity: rgba(23, 85, 118, 0.1);
+        --secondary-opacity: rgba(48, 146, 199, 0.1);
 
         --primary: rgb(255, 108, 108);
-        --primary-opacity: rgba(255, 59, 59, 0.1);
+        --primary-opacity: rgba(255, 108, 108, 0.1);
 
         --accent: rgb(19, 18, 12);
         --accent-opacity: rgba(19, 18, 12, 0.1);
