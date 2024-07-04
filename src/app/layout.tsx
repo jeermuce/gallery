@@ -24,8 +24,10 @@ type BaseThemeTaggedType = {
 type BaseTheme = BaseThemeTaggedType;
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <React.StrictMode>
@@ -49,7 +51,11 @@ export default function RootLayout({
               routerConfig={extractRouterConfig(ourFileRouter)}
             />
             <Nav />
-            {children}
+            <main className=" child:bg-red-600 bg-background text-text flex flex-row flex-1 justify-center items-start ">
+              {children}
+              {modal}
+              <div id="modal-root" />
+            </main>
             <Footer />
           </body>
         </html>

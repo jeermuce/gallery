@@ -10,13 +10,13 @@ async function Gallery() {
   //empty
 
   return (
-    <div className=" relative grid w-[80%] max-w-[80rem] flex-1 grid-cols-[repeat(auto-fill,minmax(14.6rem,1fr))] gap-4 px-4 ">
+    <div className="  relative grid w-[80%] max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
       {images.map((item) => (
         <Link
-          href={item?.url ?? "ERROR"}
+          href={`/img/${item?.id}`}
           key={`${item?.key}`}
-          target="_blank"
-          className="hover:z-10"
+          className="relative hover:z-50 min-w-full max-h- overflow-visible
+          "
         >
           <Image
             src={item?.url ?? "ERROR"}
@@ -24,18 +24,18 @@ async function Gallery() {
             alt={item?.name ?? "ERROR"}
             width={250}
             height={250}
-            style={{ objectFit: "cover" }}
             className={`
+              object-fill 
               aspect-video
               w-full 
-              transform cursor-pointer 
-              rounded-2xl 
+              transform 
+              cursor-pointer 
               transition-all 
-              duration-[200ms] 
               ease-in-out
-              hover:scale-100
-              hover:rounded-none
-              hover:drop-shadow-[0px_0px_15px_var(--accent-opacity)]
+              duration-[300ms] 
+              hover:absolute
+              hover:scale-125
+              hover:shadow-[0px_0px_30px_var(--accent-opacity)]
             `}
           />
         </Link>

@@ -10,3 +10,14 @@ export function getImages() {
     orderBy: (model, { desc }) => desc(model.createdAt),
   });
 }
+
+export function getImage(id: number) {
+  const user = auth();
+  if (!user.userId) throw new Error("Unauthorized");
+  const image = db.query.images.findFirst({
+    where: (model, { eq }) => eq(model.id, id),
+  });
+
+  if (!image) throw new Error("Image not found");
+  return image;
+}

@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import type { PluginAPI } from "tailwindcss/types/config";
 
 import { withUt } from "uploadthing/tw";
 
@@ -104,5 +105,10 @@ export default withUt({
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }: PluginAPI) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 } satisfies Config);

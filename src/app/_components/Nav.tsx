@@ -30,7 +30,7 @@ function Nav() {
   return (
     <nav className="flex sticky top-0 left-0 flex-row justify-center w-full bg-transparent navbar z-[9999] h-fit text-text drop-shadow-Srem backdrop-blur-[20px]">
       <div className="  flex w-[80%] max-w-[80rem] flex-row flex-nowrap items-center justify-between gap-8  py-2 font-semibold">
-        <Link href="/">Home</Link>
+        <Link href="/">Gallery</Link>
         {viewportWidth > 542 ? (
           <div className="flex flex-row flex-nowrap gap-8 justify-center">
             <Link href="/dashboard">Dashboard</Link>

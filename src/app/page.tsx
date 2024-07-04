@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   return (
-    <main className="flex flex-row flex-1 justify-center items-start py-4 bg-background">
+    <>
       <SignedIn>
         <Gallery />
       </SignedIn>
@@ -22,6 +22,6 @@ export default async function HomePage() {
           <MySignInButton />
         </div>
       </SignedOut>
-    </main>
+    </>
   );
 }
