@@ -5,6 +5,10 @@
 
 
 
+dialog {
+    max-width: 100vw;
+    max-height: 100vh;
+}
 
 .btn--primary {
     background-color: var(--primary);
@@ -42,6 +46,24 @@ body {
     filter: blur();
 }
 
+.modal-backdrop {
+    --smodal: 6rem;
+    /* control the size */
+    --c1modal: var(--secondary-opacity);
+    --c2modal: var(--background-opacity);
+
+    --_smodal: calc(2*var(--smodal)) calc(2*var(--smodal));
+    --_gmodal: var(--_smodal) conic-gradient(at 40% 40%, rgba(0, 0, 0, 0) 75%, var(--c1modal) 0);
+    --_pmodal: var(--_smodal) conic-gradient(at 20% 20%, rgba(0, 0, 0, 0) 75%, var(--c2modal) 0);
+    background:
+        calc(.9*var(--smodal)) calc(.9*var(--smodal))/var(--_pmodal),
+        calc(-.1*var(--smodal)) calc(-.1*var(--smodal))/var(--_pmodal),
+        calc(.7*var(--smodal)) calc(.7*var(--smodal))/var(--_gmodal),
+        calc(-.3*var(--smodal)) calc(-.3*var(--smodal))/var(--_gmodal),
+        conic-gradient(from 90deg at 20% 20%, var(--c2modal) 25%, var(--c1modal) 0) 0 0/var(--smodal) var(--smodal);
+    animation: m 5s infinite;
+    filter: blur();
+}
 
 
 @keyframes m {
@@ -100,11 +122,11 @@ body {
         --background: #040404;
         --background-opacity: #04040480;
         --primary: rgb(48, 146, 199);
-        --primary-opacity: rgba(23, 85, 118, 0.5);
+        --primary-opacity: rgba(23, 85, 118, 0.1);
         --secondary: rgb(159, 20, 20);
-        --secondary-opacity: rgba(159, 20, 20, 0.5);
+        --secondary-opacity: rgba(159, 20, 20, 0.1);
         --accent: #fff09a;
-        --accent-opacity: rgba(255, 240, 154, 0.5);
+        --accent-opacity: rgba(255, 240, 154, 0.1);
 
         --text-50: rgb(242, 242, 242);
         --text-100: rgb(230, 230, 230);
@@ -183,13 +205,13 @@ body {
         --text-opacity: #04040480;
 
         --secondary: rgb(48, 146, 199);
-        --secondary-opacity: rgba(23, 85, 118, 0.5);
+        --secondary-opacity: rgba(23, 85, 118, 0.1);
 
         --primary: rgb(255, 108, 108);
-        --primary-opacity: rgba(255, 59, 59, 0.5);
+        --primary-opacity: rgba(255, 59, 59, 0.1);
 
         --accent: rgb(19, 18, 12);
-        --accent-opacity: rgba(19, 18, 12, 0.5);
+        --accent-opacity: rgba(19, 18, 12, 0.1);
 
         --text-50: rgb(242, 242, 242);
         --text-100: rgb(230, 230, 230);

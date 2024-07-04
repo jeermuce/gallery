@@ -41,7 +41,7 @@ export default function RootLayout({
         }}
       >
         <html lang="en" className={`${GeistSans.variable} h-full w-full p-0`}>
-          <body className="flex flex-col min-h-screen bg-background">
+          <body className="flex flex-col min-h-screen overflow-x-clip bg-background">
             <NextSSRPlugin
               /**
                * The `extractRouterConfig` will extract **only** the route configs
