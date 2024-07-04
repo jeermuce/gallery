@@ -26,5 +26,13 @@ Sentry.init({
       maskAllText: true,
       blockAllMedia: true,
     }),
+    Sentry.feedbackIntegration({
+      themeDark: {
+        background: "#040404",
+      },
+      colorScheme: "dark",
+      autoInject: false,
+      showBranding: false,
+    }),
   ],
 });

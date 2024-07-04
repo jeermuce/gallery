@@ -14,15 +14,16 @@ export default async function PhotoPage({
     <Link
       href={image?.url ?? "ERROR"}
       target="_blank"
-      className="card w-fit flex flex-col items-center justify-center "
+      className="flex flex-col justify-center items-center card w-fit"
     >
       <Image
         src={image?.url ?? "ERROR"}
         key={`${image?.key}`}
         alt={image?.name ?? "ERROR"}
-        width={700}
-        height={700}
-        className={"object-contain"}
+        width={7000}
+        height={7000}
+        unoptimized
+        className={"object-contain max-w-[80rem] w-[80%] "}
       />
     </Link>
   );

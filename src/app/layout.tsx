@@ -8,6 +8,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import Footer from "~/app/_components/Footer";
 import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import SentryFeedbackWidget from "./sentry-feedback-widget";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
@@ -50,6 +51,7 @@ export default function RootLayout({
                */
               routerConfig={extractRouterConfig(ourFileRouter)}
             />
+            {/* <SentryFeedbackWidget /> */}
             <Nav />
             <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
               {children}

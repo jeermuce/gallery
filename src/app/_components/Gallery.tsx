@@ -32,7 +32,6 @@ async function Gallery() {
               transition-all 
               ease-in-out
               duration-[300ms] 
-              hover:absolute
               hover:scale-125
               hover:shadow-[0px_0px_30px_var(--accent-opacity)]
             `}

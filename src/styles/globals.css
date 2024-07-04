@@ -6,6 +6,9 @@
 
 
 
+.btn--primary {
+    background-color: var(--primary);
+}
 
 * {
     margin: 0;
@@ -164,6 +167,7 @@ body {
         --accent-950: rgb(26, 22, 0);
 
     }
+
 
     .light {
         --linearPrimarySecondary: linear-gradient(rgb(23, 85, 118), rgb(159, 20, 20));
