@@ -8,12 +8,12 @@ export default async function PhotoModal(props: { id: number }) {
   if (!image) throw new Error("Image not found");
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
   return (
-    <div className="flex flex-row border max-h-[80%]">
+    <div className="flex flex-row border max-h-75">
       <a
         href={image?.url ?? "ERROR"}
         rel="noreferrer"
         target="_blank"
-        className="max-w-[80rem] h-min max-h-screen  flex "
+        className="max-w-prose h-min max-h-screen flex "
       >
         <img
           src={image?.url ?? "ERROR"}

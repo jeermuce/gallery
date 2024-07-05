@@ -10,7 +10,7 @@ async function Gallery() {
   //empty
 
   return (
-    <div className="  relative grid w-[80%] max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
+    <div className="  relative grid w-75 max-w-prose flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
       {images.map((item) => (
         <Link
           href={`/img/${item?.id}`}
