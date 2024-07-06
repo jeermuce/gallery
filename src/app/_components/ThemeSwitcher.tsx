@@ -28,7 +28,7 @@ export default function ThemeSwitch() {
     return (
       <button
         type="button"
-        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-secondary text-accent"
+        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-primary text-accent"
         onMouseDown={() => setTheme("light")}
       >
         <FiSun />
@@ -40,7 +40,7 @@ export default function ThemeSwitch() {
     return (
       <button
         type="button"
-        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-secondary text-accent"
+        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-primary text-accent"
         onMouseDown={() => setTheme("dark")}
       >
         <FiMoon />

@@ -15,19 +15,21 @@ async function Gallery() {
     return (
       <div className="relative content-center grid w-4/5 max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
         {!!images &&
-          images.map((item) => (
+          [...images, ...images, ...images].map((item) => (
             <Link
               href={`/img/${item?.id}`}
               key={`${item?.key}`}
-              className="overflow-visible relative min-w-full hover:z-50"
+              className="overflow-visible relative min-w-full bg-black hover:z-50"
             >
-              <Image
+              <img
                 src={item?.url ?? "ERROR"}
                 key={`${item?.key}`}
                 alt={item?.name ?? "ERROR"}
                 width={250}
                 height={250}
                 className={`
+               opacity-50
+               hover:opacity-100
               object-fill 
               aspect-video
               w-full

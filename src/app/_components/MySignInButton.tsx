@@ -7,7 +7,7 @@ function MySignInButton() {
       <SignInButton>
         <button
           type="button"
-          className="flex flex-row gap-2 justify-center items-center p-2 font-semibold rounded-md cursor-pointer hover:scale-150 bg-secondary text-text"
+          className="flex flex-row gap-2 justify-center items-center p-2 font-semibold rounded-md cursor-pointer hover:scale-150 bg-primary text-text"
         >
           <h1 className="text-3xl font-bold">Sign In</h1>
         </button>

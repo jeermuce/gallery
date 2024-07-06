@@ -17,8 +17,8 @@ export default withUt({
         Srem: "0 0px 1rem var(--secondary-opacity)",
         Frem: "0 0px 0.5rem var(--secondary-opacity)",
       },
-
       colors: {
+        github: "var(--github)",
         text: {
           DEFAULT: {
             DEFAULT: "var(--text)",
@@ -100,8 +100,14 @@ export default withUt({
           950: "var(--accent-950)",
         },
       },
-      backgroundImage: {
-        "animated-background": ".animated-background",
+      keyframes: {
+        rotate180: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(180deg)" },
+        },
+      },
+      animation: {
+        rotate180: "rotate180 0.5s ease-in-out",
       },
     },
   },
