@@ -30,7 +30,7 @@ function Footer() {
     };
   }, []);
   return (
-    <footer className="flex justify-center items-start py-12 w-full bg-transparent backdrop-blur-sm">
+    <footer className="flex justify-center items-start py-12 w-full backdrop-blur-[25px] bg-transparent">
       <div className="max-w-[80rem] w-[80%] grid grid-cols-3 py-2 font-semibold">
         <div className="flex flex-col flex-nowrap gap-8 justify-start items-center p-0">
           <Link
