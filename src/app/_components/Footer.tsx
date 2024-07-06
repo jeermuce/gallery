@@ -1,34 +1,8 @@
 "use client";
-import { SignedIn, UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
-import MyUserButton from "~/components/MyUserButton";
-import { UploadButton } from "~/utils/uploadthing";
-import BurgerMenuClosed from "./BurgerMenu/BurgerMenuClosed";
 
 function Footer() {
-  const router = useRouter();
-  const [viewportWidth, setViewportWidth] = useState<number>(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setViewportWidth(window.innerWidth);
-    };
-
-    // Set initial viewport width
-    handleResize();
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <footer className="flex justify-center items-start py-12 w-full bg-text text-background">
       <div className="max-w-[80rem] w-[80%] grid grid-cols-3 py-2 font-semibold">
@@ -76,7 +50,7 @@ function Footer() {
             <img
               src="https://gravatar.com/userimage/239490451/8f9ca5674259da3762d4a6bca51fbb2c.jpeg?size=48"
               alt="Gravatar"
-              className="h-12 transition-all duration-300 ease-in-out aspect-square rounded-full rotating-logo"
+              className="h-12 rounded-full transition-all duration-300 ease-in-out aspect-square rotating-logo"
             />
           </a>
         </div>

@@ -15,7 +15,7 @@ async function Gallery() {
     return (
       <div className="relative content-center grid w-4/5 max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
         {!!images &&
-          [...images, ...images, ...images].map((item) => (
+          images.map((item) => (
             <Link
               href={`/img/${item?.id}`}
               key={`${item?.key}`}
