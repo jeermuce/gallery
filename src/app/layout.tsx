@@ -14,11 +14,7 @@ export const metadata = {
   description: "Image Gallery",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
-export const viewport = {
-  width: 1,
-  height: 1,
-  themeColor: "dark",
-};
+
 type BaseThemeTaggedType = {
   __type: "prebuilt_appearance";
 };
@@ -53,7 +49,7 @@ export default function RootLayout({
             />
             {/* <SentryFeedbackWidget /> */}
             <Nav />
-            <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
+            <main className="flex flex-row flex-1 justify-center items-center bg-background text-text">
               {children}
               {modal}
               <div id="modal-root" />

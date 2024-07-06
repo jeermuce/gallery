@@ -111,4 +111,5 @@ export default withUt({
       addVariant("child-hover", "& > *:hover");
     },
   ],
+  darkMode: "class",
 } satisfies Config);

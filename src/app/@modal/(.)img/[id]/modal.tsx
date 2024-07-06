@@ -28,7 +28,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
     <dialog
       ref={dialogRef}
       onClose={onDismiss}
-      className="flex flex-row items-center justify-center w-screen bg-background-DEFAULT-opacity backdrop-blur-sm h-screen text-text"
+      className="flex flex-row items-center justify-center w-screen bg-black/90 backdrop-blur-sm h-screen text-white"
     >
       {children}
       {/* <button type="button" onMouseDown={onDismiss} className="close-button" /> */}
