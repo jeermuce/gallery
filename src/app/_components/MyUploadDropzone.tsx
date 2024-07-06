@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { UploadDropzone } from "~/utils/uploadthing";
 
-function UploadThing() {
+function MyUploadDropzone() {
   const [viewportWidth, setViewportWidth] = useState<number>(0);
   const router = useRouter();
 
@@ -59,4 +59,4 @@ function UploadThing() {
   );
 }
 
-export default UploadThing;
+export default MyUploadDropzone;
