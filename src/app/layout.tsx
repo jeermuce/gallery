@@ -9,6 +9,7 @@ import Footer from "~/app/_components/Footer";
 import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 import SentryFeedbackWidget from "./sentry-feedback-widget";
+import { MyThemeProvider } from "./my-theme-provider";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
@@ -36,25 +37,31 @@ export default function RootLayout({
           },
         }}
       >
-        <html lang="en" className={`${GeistSans.variable} h-full w-full p-0`}>
+        <html
+          lang="en"
+          suppressHydrationWarning
+          className={`${GeistSans.variable}  h-full w-full p-0`}
+        >
+          <NextSSRPlugin
+            /**
+             * The `extractRouterConfig` will extract **only** the route configs
+             * from the router to prevent additional information from being
+             * leaked to the client. The data passed to the client is the same
+             * as if you were to fetch `/api/uploadthing` directly.
+             */
+            routerConfig={extractRouterConfig(ourFileRouter)}
+          />
           <body className="flex flex-col min-h-screen overflow-x-clip bg-background">
-            <NextSSRPlugin
-              /**
-               * The `extractRouterConfig` will extract **only** the route configs
-               * from the router to prevent additional information from being
-               * leaked to the client. The data passed to the client is the same
-               * as if you were to fetch `/api/uploadthing` directly.
-               */
-              routerConfig={extractRouterConfig(ourFileRouter)}
-            />
-            {/* <SentryFeedbackWidget /> */}
-            <Nav />
-            <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
-              {children}
-              {modal}
-              <div id="modal-root" />
-            </main>
-            <Footer />
+            <MyThemeProvider className="flex flex-col min-h-screen overflow-x-clip bg-transparent">
+              {/* <SentryFeedbackWidget /> */}
+              <Nav />
+              <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
+                {children}
+                {modal}
+                <div id="modal-root" />
+              </main>
+              <Footer />
+            </MyThemeProvider>
           </body>
         </html>
       </ClerkProvider>

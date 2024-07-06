@@ -11,7 +11,7 @@ export default async function HomePage() {
         <Gallery />
       </SignedIn>
       <SignedOut>
-        <div className="flex flex-col gap-8 justify-center items-center mx-4 text-text">
+        <div className="h-full flex flex-col gap-8 justify-center items-center mx-4 text-text">
           <h1 className="text-3xl font-bold">
             Welcome to {process.env.NEXT_PUBLIC_SITE_NAME}
           </h1>
