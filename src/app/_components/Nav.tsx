@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
+import MyUserButton from "~/components/MyUserButton";
 import { UploadButton } from "~/utils/uploadthing";
 import BurgerMenuClosed from "./BurgerMenu/BurgerMenuClosed";
 
@@ -63,11 +64,7 @@ function Nav() {
             {viewportWidth < 542 ? <BurgerMenuClosed /> : null}
           </SignedIn>
 
-          {viewportWidth > 542 ? (
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          ) : null}
+          {viewportWidth > 542 ? <MyUserButton /> : null}
         </div>
       </div>
     </nav>
