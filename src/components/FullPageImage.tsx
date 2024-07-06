@@ -1,6 +1,5 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
-import Link from "next/link";
 import { getImage } from "~/server/db/queries";
 
 export default async function PhotoModal(props: { id: number }) {
@@ -24,8 +23,8 @@ export default async function PhotoModal(props: { id: number }) {
       </a>
 
       <div className="min-h-full border-l min-w-[12rem]">
-        <div className="justify-start items-start h-full text-text flexflex-col">
-          <div className="p-2 w-full text-lg text-center border-b">
+        <div className="justify-start items-start h-full  flexflex-col">
+          <div className="p-2 w-full text-lg font-bold text-center border-b">
             {image?.name ?? "ERROR"}
           </div>
           <div className="flex flex-col items-start p-2 w-full">
