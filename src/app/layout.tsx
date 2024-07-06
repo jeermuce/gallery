@@ -13,7 +13,7 @@ import SentryFeedbackWidget from "./sentry-feedback-widget";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "https://i.imgur.com/FTAK7os.png" }],
 };
 
 type BaseThemeTaggedType = {
