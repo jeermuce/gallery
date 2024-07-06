@@ -49,7 +49,7 @@ export default function RootLayout({
             />
             {/* <SentryFeedbackWidget /> */}
             <Nav />
-            <main className="flex flex-row flex-1 justify-center items-center bg-background text-text">
+            <main className="flex flex-row flex-1 justify-center items-start bg-background text-text">
               {children}
               {modal}
               <div id="modal-root" />

@@ -13,22 +13,22 @@ export default async function PhotoModal(props: { id: number }) {
         href={image?.url ?? "ERROR"}
         rel="noreferrer"
         target="_blank"
-        className="max-w-prose h-min max-h-screen flex "
+        className="flex max-w-prose max-h-screen h-min"
       >
         <img
           src={image?.url ?? "ERROR"}
           key={`${image?.key}`}
           alt={image?.name ?? "ERROR"}
-          className="flex-shrink-0 max-w-full w-fit max-h-full object-contain"
+          className="object-contain flex-shrink-0 max-w-full max-h-full w-fit"
         />
       </a>
 
-      <div className="min-h-full border-l min-w-[12rem]  ">
-        <div className="flexflex-col items-start justify-start h-full text-white">
-          <div className="w-full text-lg text-center p-2 border-b">
+      <div className="min-h-full border-l min-w-[12rem]">
+        <div className="justify-start items-start h-full text-white flexflex-col">
+          <div className="p-2 w-full text-lg text-center border-b">
             {image?.name ?? "ERROR"}
           </div>
-          <div className="flex items-start p-2 w-full   flex-col">
+          <div className="flex flex-col items-start p-2 w-full">
             <span>Uploaded By: </span>
             <span>{uploaderInfo.firstName}</span>
             <span>Uploaded On: </span>
