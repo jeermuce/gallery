@@ -18,7 +18,10 @@ export default withUt({
         Frem: "0 0px 0.5rem var(--secondary-opacity)",
       },
       colors: {
-        github: "var(--github)",
+        github: {
+          bg: "var(--github-bg)",
+          tx: "var(--github-tx)",
+        },
         text: {
           DEFAULT: {
             DEFAULT: "var(--text)",

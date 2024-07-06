@@ -125,7 +125,8 @@ body {
         --radialPrimarySecondary: radial-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
         --radialPrimaryAccent: radial-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --radialSecondaryAccent: radial-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
-        --github: #ffff;
+        --github-tx: #ffffff;
+        --github-bg: #000000;
         --text: #E4E4E4;
         --text-opacity: #e4e4e480;
         --background: #040404;
@@ -208,7 +209,8 @@ body {
         --radialPrimarySecondary: radial-gradient(rgb(48, 146, 199), rgb(159, 20, 20));
         --radialPrimaryAccent: radial-gradient(rgb(48, 146, 199), rgb(255, 240, 154));
         --radialSecondaryAccent: radial-gradient(rgb(159, 20, 20), rgb(255, 240, 154));
-        --github: #000000ff;
+        --github-bg: #ffffff;
+        --github-tx: #000000;
         --background: #e4e4e4;
         --background-opacity: rgba(228, 228, 228, 0.9);
         --text: #040404;
