@@ -5,7 +5,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-export default function ThemeSwitch() {
+export default function ThemeSwitch(
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
+) {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -24,27 +26,16 @@ export default function ThemeSwitch() {
       />
     );
 
-  if (resolvedTheme === "dark") {
-    return (
-      <button
-        type="button"
-        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-primary text-accent"
-        onMouseDown={() => setTheme("light")}
-      >
-        <FiSun />
-      </button>
-    );
-  }
-
-  if (resolvedTheme === "light") {
-    return (
-      <button
-        type="button"
-        className="flex justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-primary text-accent"
-        onMouseDown={() => setTheme("dark")}
-      >
-        <FiMoon />
-      </button>
-    );
-  }
+  return (
+    <button
+      type="button"
+      {...props}
+      className={`${props.className} flex justify-center items-center `}
+      onMouseDown={() =>
+        setTheme(() => (resolvedTheme === "dark" ? "light" : "dark"))
+      }
+    >
+      {resolvedTheme === "dark" ? <FiSun /> : <FiMoon />}
+    </button>
+  );
 }
