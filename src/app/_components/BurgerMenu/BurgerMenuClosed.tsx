@@ -1,11 +1,13 @@
+"use client";
+
 import { useState } from "react";
 import BurgerMenuOpen from "./BurgerMenuOpen";
 const BurgerMenuClosed = () => {
   const [openBurger, setopenBurger] = useState(false);
   return (
-    <div className="flex relative justify-center items-center p-2 w-12 font-bold rounded-full line aspect-square bg-background text-text">
+    <div className="">
       <button
-        className="burger-menu-button"
+        className=""
         onMouseDown={() => setopenBurger(!openBurger)}
         type="button"
       >
@@ -20,7 +22,7 @@ const BurgerMenuClosed = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="burger-menu-button-icon"
+          className=""
           aria-label="Menu"
         >
           <line x1="3" y1="12" x2="21" y2="12" />

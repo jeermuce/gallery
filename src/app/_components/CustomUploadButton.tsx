@@ -1,29 +1,26 @@
 "use client";
+import { useRouter } from "next/navigation";
+import type React from "react";
+import { useUploadThingInputProps } from "~/utils/use-uploadthing-input-props";
 
-import { useUploadThing } from "~/utils/uploadthing";
+function CustomUploadButton(
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
+) {
+  const { inputProps, isUploading } = useUploadThingInputProps("imageUploader");
 
-// inferred input off useUploadThing
-type Input = Parameters<typeof useUploadThing>;
+  return (
+    <div className="custom-upload-button">
+      <label htmlFor="upload-input" className="cursor-pointer select-none">
+        Upload
+      </label>
+      <input
+        {...inputProps}
+        type="file"
+        className="sr-only"
+        id="upload-input"
+      />
+    </div>
+  );
+}
 
-const useUploadThingInputProps = (...args: Input) => {
-  const $ut = useUploadThing(...args);
-
-  const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files) return;
-
-    const selectedFiles = Array.from(e.target.files);
-    const result = await $ut.startUpload(selectedFiles);
-
-    console.log("uploaded files", result);
-    // TODO: persist result in state maybe?
-  };
-
-  return {
-    inputProps: {
-      onChange,
-      multiple: ($ut.permittedFileInfo?.config?.image?.maxFileCount ?? 1) > 1,
-      accept: "image/*",
-    },
-    isUploading: $ut.isUploading,
-  };
-};
+export default CustomUploadButton;

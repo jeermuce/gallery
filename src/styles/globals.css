@@ -10,10 +10,6 @@ dialog {
     max-height: 100vh;
 }
 
-.btn--primary {
-    background-color: var(--primary);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -113,9 +109,46 @@ body {
     transition: all ease-in-out;
 }
 
+/* visible only when wider than 1344px */
+@media screen and (max-width: 1344px) {
+
+    .my-dropzone {
+        display: none;
+    }
+}
+
+/* visible only when wider than 542px */
+@media screen and (max-width: 542px) {
+    .mustbevisibleonlywhenthescreeniswiderthan542andthinerthan1344 {
+        display: none;
+    }
+
+    .mustbevisibleonlywhenthescreeniswiderthan542 {
+        display: none;
+    }
+}
+
+
+
+/* visible only when thiner than 542px */
+@media screen and (min-width: 542px) {
+
+    .mustbevisibleonlywhenthescreenisthinerthan542 {
+        display: none;
+    }
+}
+
+/* visible only when thiner than 1344px */
+@media screen and (min-width: 1344px) {
+    .mustbevisibleonlywhenthescreeniswiderthan542andthinerthan1344 {
+        display: none;
+    }
+}
+
 .gallery-image:hover {
     box-shadow: 20px 10px 15px rgba(0, 0, 0, 0.7), -20px -10px 15px rgb(255, 255, 255, 0.7);
 }
+
 
 @layer base {
     :root {

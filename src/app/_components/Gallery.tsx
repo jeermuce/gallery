@@ -13,7 +13,7 @@ async function Gallery() {
 
   if (images.length > 1) {
     return (
-      <div className="relative content-center grid w-4/5 max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))]  grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
+      <div className="relative content-center grid w-4/5 max-w-[80rem] flex-1 grid-rows-[repeat(auto-fill,minmax(1rem,1fr))] grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4 p-4 ">
         {!!images &&
           images.map((item) => (
             <Link
@@ -27,20 +27,8 @@ async function Gallery() {
                 alt={item?.name ?? "ERROR"}
                 width={250}
                 height={250}
-                className={`
-               opacity-50
-               hover:opacity-100
-              object-fill 
-              aspect-video
-              w-full
-              transform 
-              cursor-pointer 
-              transition-all 
-              ease-in-out
-              duration-[300ms] 
-              hover:scale-125
-              hover:shadow-[0px_0px_30px_var(--accent-opacity)]
-            `}
+                className={`opacity-50 hover:opacity-100 object-fill aspect-video w-full transform cursor-pointer transition-all ease-in-outduration-[300ms] hover:scale-125hover:shadow-[0px_0px_30px_var(--accent-opacity)]
+   `}
               />
             </Link>
           ))}

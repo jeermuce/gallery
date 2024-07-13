@@ -118,6 +118,8 @@ export default withUt({
     function ({ addVariant }: PluginAPI) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
+      addVariant("parent", ":not(:empty) > &");
+      addVariant("parent-hover", ":not(:empty) > &:hover");
     },
   ],
   darkMode: "class",
