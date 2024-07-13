@@ -120,6 +120,7 @@ export default withUt({
       addVariant("child-hover", "& > *:hover");
       addVariant("parent", ":not(:empty) > &");
       addVariant("parent-hover", ":not(:empty) > &:hover");
+      addVariant("descendants", "& *");
     },
   ],
   darkMode: "class",

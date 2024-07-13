@@ -29,10 +29,10 @@ function Nav() {
               <CustomUploadButton />
             </div>
             <ThemeSwitcher />
-            <div className="mustbevisibleonlywhenthescreenisthinerthan542">
+            <div className="mustbevisibleonlywhenthescreenisthinerthan542 aspect-square w-[24px] h-[24px]">
               <BurgerMenuClosed />
             </div>
-            <div className="mustbevisibleonlywhenthescreeniswiderthan542">
+            <div className="mustbevisibleonlywhenthescreeniswiderthan542 aspect-square w-[24px] h-[24px] descendants:w-full descendants:h-full">
               <UserButton />
             </div>
           </SignedIn>
