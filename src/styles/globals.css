@@ -113,7 +113,9 @@ body {
     transition: all ease-in-out;
 }
 
-
+.gallery-image:hover {
+    box-shadow: 20px 10px 15px rgba(0, 0, 0, 0.7), -20px -10px 15px rgb(255, 255, 255, 0.7);
+}
 
 @layer base {
     :root {
