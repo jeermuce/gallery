@@ -8,11 +8,9 @@ const BurgerMenu = () => {
         type="checkbox"
         defaultChecked={true}
         id="sidebar-toggle"
-        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-         peer/invisible hidden
-        "
+        className="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 peer/invisible"
       />
-      <label htmlFor="sidebar-toggle" className=" w-[24px] h-[24px]">
+      <label htmlFor="sidebar-toggle" className="w-[24px] h-[24px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="menu"
@@ -33,14 +31,11 @@ const BurgerMenu = () => {
         </svg>
       </label>
       <div
-        className="flex flex-col gap-2 justify-start items-end sidebar-container 
-       text-wrap bg-black/60 backdrop-blur-lg rounded-l-lg peer-checked/invisible:-right-full
-         w-fit h-screen fixed top-0 right-0 transition-all duration-400 ease-in-out
-          "
+        className="flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full w-fit duration-400"
       >
         <label
           htmlFor="sidebar-toggle"
-          className="w-[24px] h-[24px] relative top-[11px] right-[11px]"
+          className="relative w-[24px] h-[24px] top-[11px] right-[11px]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +55,7 @@ const BurgerMenu = () => {
             <line x1="3" y1="21" x2="21" y2="3" />
           </svg>
         </label>
-        <div className="p-12 flex flex-col gap-2 justify-start items-end bg-transparent text-text ">
+        <div className="flex flex-col gap-2 justify-start items-end p-12 bg-transparent text-text">
           <SignedIn>
             <UserButton />
             <Link href="/">Home</Link>
