@@ -22,10 +22,11 @@ const BurgerMenu = () => {
         id="sidebar-toggle"
         className="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 peer/invisible"
       />
-      <label htmlFor="sidebar-toggle" className="cursor-pointer">
+      <label htmlFor="sidebar-toggle" className="cursor-pointer ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="menu"
+          className="bg-background hover:bg-text rounded-full text-text hover:text-background p-1"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -45,9 +46,10 @@ const BurgerMenu = () => {
         htmlFor="sidebar-toggle"
         className="w-screen h-screen peer-checked/invisible:hidden  fixed top-0 left-0 z-9 "
       />
-      <div className="z-index-10 flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full w-fit duration-400">
-        <div className="flex flex-col gap-2 justify-start items-center p-12 text-white bg-transparent">
-          <div className="flex fixed top-0 left-0 flex-row justify-between w-full p-[11px] descendants:size-[24px]">
+
+      <div className="  z-index-10 flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full w-fit duration-400">
+        <div className="overflow-y-scroll flex flex-col gap-2 justify-start items-center p-12 text-white bg-transparent">
+          <div className=" flex fixed top-0 left-0 flex-row justify-between w-full p-[11px] descendants:size-[24px]">
             <ThemeSwitcher />
             <label
               htmlFor="sidebar-toggle"

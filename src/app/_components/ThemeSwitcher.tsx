@@ -26,7 +26,7 @@ export default function ThemeSwitch(
       type="button"
       title="Toggle Light/Dark Mode"
       {...props}
-      className={`${props.className} descendants:cursor-pointer flex justify-center items-center  `}
+      className={`${props.className} descendants:cursor-pointer hover:text-accent flex justify-center items-center  `}
       onMouseDown={() =>
         setTheme(() => (resolvedTheme === "dark" ? "light" : "dark"))
       }

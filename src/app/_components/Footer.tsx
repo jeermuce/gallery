@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 function Footer() {
@@ -48,7 +46,7 @@ function Footer() {
             rel="noreferrer noopener"
           >
             <img
-              src="https://gravatar.com/userimage/239490451/8f9ca5674259da3762d4a6bca51fbb2c.jpeg?size=48"
+              src="https://gravatar.com/userimage/239490451/8f9ca5674259da3762d4a6bca51fbb2c.jpeg?size=150"
               alt="Gravatar"
               className="h-12 rounded-full transition-all duration-300 ease-in-out aspect-square rotating-logo"
             />

@@ -194,10 +194,8 @@ body {
 
         --secondary: rgb(255, 108, 108);
         --secondary-opacity: rgba(255, 108, 108, 0.1);
-
-        --accent: rgb(19, 18, 12);
-        --accent-opacity: rgba(19, 18, 12, 0.1);
-
+        --accent: rgb(255, 240, 154);
+        --accent-opacity: rgba(255, 240, 154, 0.1);
         --text-50: rgb(242, 242, 242);
         --text-100: rgb(230, 230, 230);
         --text-200: rgb(204, 204, 204);
