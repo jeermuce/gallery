@@ -2,7 +2,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
-import BurgerMenuClosed from "./BurgerMenu/BurgerMenuClosed";
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import CustomUploadButton from "./CustomUploadButton";
 
 function Nav() {
@@ -17,26 +17,26 @@ function Nav() {
           />
           <h1>Gallery</h1>
         </Link>
-        <div className="mustbevisibleonlywhenthescreeniswiderthan542">
-          <div className="flex flex-row flex-nowrap gap-8 justify-center">
-            <Link href="/dashboard">Dashboard</Link>
-            <Link href="/forum">Forum</Link>
+        <SignedIn>
+          <div className="mustbevisibleonlywhenthescreeniswiderthan542">
+            <div className="flex flex-row flex-nowrap gap-8 justify-center">
+              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/forum">Forum</Link>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
-          <SignedIn>
+          <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
             <div className="mustbevisibleonlywhenthescreeniswiderthan542andthinerthan1344">
               <CustomUploadButton />
             </div>
             <ThemeSwitcher />
-            <div className="mustbevisibleonlywhenthescreenisthinerthan542 aspect-square w-[24px] h-[24px]">
-              <BurgerMenuClosed />
-            </div>
+
+            <BurgerMenu />
+
             <div className="mustbevisibleonlywhenthescreeniswiderthan542 aspect-square w-[24px] h-[24px] descendants:w-full descendants:h-full">
               <UserButton />
             </div>
-          </SignedIn>
-        </div>
+          </div>
+        </SignedIn>
       </div>
     </nav>
   );

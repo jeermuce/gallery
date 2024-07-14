@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <React.StrictMode>
       <ClerkProvider
+        telemetry={false}
         appearance={{
           baseTheme: dark,
           elements: {

@@ -25,8 +25,8 @@ async function Gallery() {
                 src={item?.url ?? "ERROR"}
                 key={`${item?.key}`}
                 alt={item?.name ?? "ERROR"}
-                width={250}
-                height={250}
+                width={100}
+                height={100}
                 className={`opacity-50 hover:opacity-100 object-fill aspect-video w-full transform cursor-pointer transition-all ease-in-outduration-[300ms] hover:scale-125hover:shadow-[0px_0px_30px_var(--accent-opacity)]
    `}
               />
