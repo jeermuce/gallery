@@ -12,7 +12,7 @@ const BurgerMenu = () => {
         id="sidebar-toggle"
         className="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 peer/invisible"
       />
-      <label htmlFor="sidebar-toggle" className="descandants:size-[24px]">
+      <label htmlFor="sidebar-toggle" className="descendants:size-[24px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="menu"
