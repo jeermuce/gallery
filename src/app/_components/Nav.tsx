@@ -2,7 +2,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import BurgerMenu from "./BurgerMenu";
 import CustomUploadButton from "./CustomUploadButton";
 
 function Nav() {
@@ -28,7 +28,7 @@ function Nav() {
             <div className="mustbevisibleonlywhenthescreeniswiderthan542andthinerthan1344">
               <CustomUploadButton />
             </div>
-            <ThemeSwitcher />
+            <ThemeSwitcher className="mustbevisibleonlywhenthescreeniswiderthan542 descendants:size-[20px]" />
 
             <BurgerMenu />
 

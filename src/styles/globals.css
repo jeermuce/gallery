@@ -38,7 +38,7 @@ body {
         calc(.7*var(--s)) calc(.7*var(--s))/var(--_g),
         calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
         conic-gradient(from 90deg at 20% 20%, var(--c2) 25%, var(--c1) 0) 0 0/var(--s) var(--s);
-    animation: m 5s infinite;
+
     filter: blur();
 }
 

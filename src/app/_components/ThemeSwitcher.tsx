@@ -16,10 +16,8 @@ export default function ThemeSwitch(
   if (!mounted)
     return (
       <FiSun
-        width={24}
-        height={24}
         title="Loading Light/Dark Toggle"
-        className="cursor-not-allowed"
+        className={`cursor-not-allowed ${props.className}`}
       />
     );
 
@@ -28,7 +26,7 @@ export default function ThemeSwitch(
       type="button"
       title="Toggle Light/Dark Mode"
       {...props}
-      className={`${props.className} descendants:cursor-pointer flex justify-center items-center descendants:size-[20px] `}
+      className={`${props.className} descendants:cursor-pointer flex justify-center items-center  `}
       onMouseDown={() =>
         setTheme(() => (resolvedTheme === "dark" ? "light" : "dark"))
       }
