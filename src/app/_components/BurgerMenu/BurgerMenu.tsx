@@ -34,8 +34,9 @@ const BurgerMenu = () => {
       </label>
       <div
         className="flex flex-col gap-2 justify-start items-end sidebar-container 
-       text-wrap bg-black/60 backdrop-blur-lg rounded-l-lg peer-checked/invisible:hidden
-         w-fit h-screen fixed top-0 right-0 "
+       text-wrap bg-black/60 backdrop-blur-lg rounded-l-lg peer-checked/invisible:-right-full
+         w-fit h-screen fixed top-0 right-0 transition-all duration-400 ease-in-out
+          "
       >
         <label
           htmlFor="sidebar-toggle"
