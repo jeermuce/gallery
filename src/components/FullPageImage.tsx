@@ -2,12 +2,17 @@ import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { getImage } from "~/server/db/queries";
 
-export default async function PhotoModal(props: { id: number }) {
+export default async function PhotoModal(props: {
+  id: number;
+  className?: string;
+}) {
   const image = await getImage(props.id);
   if (!image) throw new Error("Image not found");
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
   return (
-    <div className="flex flex-row border max-h-4/5 backdrop-blur-sm">
+    <div
+      className={`${props.className} flex flex-row border border-text-DEFAULT-opacity overflow-hidden max-h-4/5 backdrop-blur-sm`}
+    >
       <a
         href={image?.url ?? "ERROR"}
         rel="noreferrer"
@@ -22,7 +27,7 @@ export default async function PhotoModal(props: { id: number }) {
         />
       </a>
 
-      <div className="min-h-full border-l min-w-[12rem]">
+      <div className="min-h-full border-l  min-w-[12rem]">
         <div className="justify-start items-start h-full flexflex-col">
           <div className="p-2 w-full text-lg font-bold text-center border-b">
             {image?.name ?? "ERROR"}
