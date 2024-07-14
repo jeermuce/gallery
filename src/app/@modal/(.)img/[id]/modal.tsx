@@ -31,7 +31,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
       className="flex flex-row justify-center items-center w-screen h-screen text-white bg-black/70 backdrop-blur-sm"
     >
       <div
-        className="fixed w-screen h-screen top-0 left-0 bg-transparent"
+        className="fixed top-0 left-0 w-screen h-screen bg-transparent"
         onMouseDown={onDismiss}
       />
       {children}

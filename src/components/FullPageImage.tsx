@@ -27,7 +27,7 @@ export default async function PhotoModal(props: {
         />
       </a>
 
-      <div className="min-h-full border-l  min-w-[12rem]">
+      <div className="min-h-full border-l min-w-[12rem]">
         <div className="justify-start items-start h-full flexflex-col">
           <div className="p-2 w-full text-lg font-bold text-center border-b">
             {image?.name ?? "ERROR"}
