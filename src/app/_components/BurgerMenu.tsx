@@ -20,7 +20,7 @@ const BurgerMenu = () => {
         type="checkbox"
         defaultChecked={true}
         id="sidebar-toggle"
-        className=" fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 peer/invisible"
+        className="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 peer/invisible"
       />
       <label htmlFor="sidebar-toggle" className="cursor-pointer">
         <svg
