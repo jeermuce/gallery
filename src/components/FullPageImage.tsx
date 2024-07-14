@@ -11,7 +11,7 @@ export default async function PhotoModal(props: {
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
   return (
     <div
-      className={`${props.className} flex flex-row border border-text-DEFAULT-opacity overflow-hidden max-h-4/5 backdrop-blur-sm`}
+      className={`${props.className} flex flex-row border border-[#38383D] descendants:border-[#38383D] overflow-hidden max-h-4/5 backdrop-blur-sm`}
     >
       <a
         href={image?.url ?? "ERROR"}

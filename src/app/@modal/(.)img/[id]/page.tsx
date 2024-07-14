@@ -11,10 +11,7 @@ export default async function PhotoModal({
 
   return (
     <Modal>
-      <FullPageImage
-        id={id}
-        className="rounded-lg border border-white/20 descendants:border-white/20 overflow-hidden"
-      />
+      <FullPageImage id={id} className="rounded-lg  overflow-hidden" />
     </Modal>
   );
 }
