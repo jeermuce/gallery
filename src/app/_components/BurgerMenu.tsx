@@ -5,9 +5,7 @@ import CustomUploadButton from "./CustomUploadButton";
 import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
 const BurgerMenu = () => {
   return (
-    <div
-      className="md:hidden descendants:transition-all descendants:ease-out aspect-square w-[24px] h-[24px] descendants:duration-300"
-    >
+    <div className="md:hidden descendants:transition-all descendants:ease-out aspect-square w-[24px] h-[24px] descendants:duration-300">
       <input
         type="checkbox"
         defaultChecked={true}
