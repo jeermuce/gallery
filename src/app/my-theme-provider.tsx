@@ -11,7 +11,7 @@ export function MyThemeProvider({
   className: string;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       <div className={className}>{children}</div>
     </ThemeProvider>
   );
