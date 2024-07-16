@@ -19,12 +19,12 @@ dialog {
 }
 
 
-body {
+nav {
 
-    --s: 6rem;
+    --s: 2rem;
     /* control the size */
-    --c1: var(--primary);
-    --c2: var(--background);
+    --c1: var(--primary-opacity);
+    --c2: var(--background-opacity);
 
     --_s: calc(2*var(--s)) calc(2*var(--s));
     --_g: var(--_s) conic-gradient(at 40% 40%, #0000 75%, var(--c1) 0);
