@@ -18,27 +18,10 @@ dialog {
     text-align: center;
 }
 
-/* Ensure the sidebar-container is transparent to clicks in the area of the close-button */
-#close-button {
-    position: relative;
-    z-index: 10;
-}
 
-.sidebar-container {
-    pointer-events: auto;
-}
 
-#close-button-container {
-    position: relative;
-    z-index: 20;
-}
 
-#close-button-container::before {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    z-index: 15;
-}
+
 
 
 @layer utilities {

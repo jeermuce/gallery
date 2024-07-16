@@ -25,7 +25,7 @@ const BurgerMenu = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          className="cursor-pointer rounded-full  text-white hover:bg-secondary hover:text-black"
+          className="cursor-pointer relative z-10 rounded-full  text-white hover:bg-secondary hover:text-black"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
@@ -65,9 +65,19 @@ const BurgerMenu = () => {
         className="fixed top-0 left-0 w-screen h-screen peer-checked/invisible:hidden z-9"
       />
 
-      <div className="flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out z-index-10 sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full w-fit duration-400">
+      <div
+        className="flex  
+      fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen 
+      rounded-l-lg transition-all ease-in-out z-index-10 pointer-events-auto
+       sidebar-container text-wrap bg-black/60 backdrop-blur-lg 
+       peer-checked/invisible:-right-full 
+       peer-checked/invisible:descendants:hidden
+       peer-checked/invisible:peer-checked:duration-0
+       peer-checked/invisible:peer-checked:transition-none
+       w-fit duration-400"
+      >
         <div className="flex overflow-y-scroll flex-col gap-2 justify-start items-center p-12 text-white bg-transparent">
-          <ThemeSwitcher className="mt-2 ml-2 size-8 descendants:size-8 absolute top-0 left-0" />
+          <ThemeSwitcher className=" mt-2 ml-2 size-8 descendants:size-8 absolute top-0 left-0" />
           <SignedIn>
             <UserButton />
             <Link href="/">Home</Link>
