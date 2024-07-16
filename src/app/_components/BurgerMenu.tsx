@@ -15,7 +15,7 @@ const BurgerMenu = () => {
       />
       <label
         htmlFor="sidebar-toggle"
-        className="cursor-pointer peer-checked/invisible:hidden block hover:text-secondary rounded-full size-8 descendants:size-8 "
+        className="block rounded-full cursor-pointer peer-checked/invisible:hidden size-8 descendants:size-8 hover:text-secondary"
       >
         <svg
           id="close-button"
@@ -25,7 +25,7 @@ const BurgerMenu = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          className="cursor-pointer relative z-10 rounded-full  text-white hover:bg-secondary hover:text-black"
+          className="relative z-10 text-white rounded-full cursor-pointer hover:text-black hover:bg-secondary"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
@@ -38,13 +38,13 @@ const BurgerMenu = () => {
       </label>
       <label
         htmlFor="sidebar-toggle"
-        className="cursor-pointer peer-checked/invisible:block hidden hover:text-secondary rounded-full size-8 descendants:size-8 "
+        className="hidden rounded-full cursor-pointer peer-checked/invisible:block size-8 descendants:size-8 hover:text-secondary"
       >
         <svg
           id="open-button"
           xmlns="http://www.w3.org/2000/svg"
           role="menu"
-          className="cursor-pointer  rounded-full  text-text hover:bg-text hover:text-background"
+          className="rounded-full cursor-pointer text-text hover:bg-text hover:text-background"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -66,18 +66,10 @@ const BurgerMenu = () => {
       />
 
       <div
-        className="flex  
-      fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen 
-      rounded-l-lg transition-all ease-in-out z-index-10 pointer-events-auto
-       sidebar-container text-wrap bg-black/60 backdrop-blur-lg 
-       peer-checked/invisible:-right-full 
-       peer-checked/invisible:descendants:hidden
-       peer-checked/invisible:peer-checked:duration-0
-       peer-checked/invisible:peer-checked:transition-none
-       w-fit duration-400"
+        className="flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out pointer-events-auto z-index-10 sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full peer-checked/invisible:descendants:hidden peer-checked/invisible:peer-checked:duration-0 peer-checked/invisible:peer-checked:transition-none w-fit duration-400"
       >
         <div className="flex overflow-y-scroll flex-col gap-2 justify-start items-center p-12 text-white bg-transparent">
-          <ThemeSwitcher className=" mt-2 ml-2 size-8 descendants:size-8 absolute top-0 left-0" />
+          <ThemeSwitcher className="absolute top-0 left-0 mt-2 ml-2 size-8 descendants:size-8" />
           <SignedIn>
             <UserButton />
             <Link href="/">Home</Link>
