@@ -8,5 +8,5 @@ export default async function PhotoPage({
 
   if (Number.isNaN(id)) throw new Error("Invalid photo ID");
 
-  return <FullPageImage id={id} className="overflow-hidden mt-6 rounded-lg" />;
+  return <FullPageImage id={id} className="overflow-hidden my-6 rounded-lg" />;
 }
