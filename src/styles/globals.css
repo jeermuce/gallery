@@ -25,6 +25,8 @@ dialog {
 
 
 @layer utilities {
+
+
     .animated-background {
         --s: 2rem;
         /* control the size */

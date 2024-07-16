@@ -2,12 +2,17 @@
 import { useRouter } from "next/navigation";
 import { UploadDropzone } from "~/utils/uploadthing";
 
-function MyUploadDropzone() {
+function MyUploadDropzone(
+  props: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >,
+) {
   const router = useRouter();
 
   return (
     <>
-      <div className="hidden absolute rounded-2xl lg:block top-[1rem] right-[-174px]">
+      <div className={`${props.className}`}>
         <UploadDropzone
           onClientUploadComplete={() => router.refresh()}
           appearance={{

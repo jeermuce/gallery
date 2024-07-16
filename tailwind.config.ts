@@ -12,9 +12,9 @@ export default withUt({
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
       screens: {
-        sm: "542px",
-        md: "543px",
+        md: "600px",
         lg: "1345px",
+        xl: "1760px",
       },
       rotate: {
         rotate: "var(--rotate)",
