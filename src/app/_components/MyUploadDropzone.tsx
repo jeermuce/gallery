@@ -7,7 +7,7 @@ function MyUploadDropzone() {
 
   return (
     <>
-      <div className="absolute rounded-2xl my-dropzone top-[1rem] right-[-174px]">
+      <div className="hidden absolute rounded-2xl lg:block top-[1rem] right-[-174px]">
         <UploadDropzone
           onClientUploadComplete={() => router.refresh()}
           appearance={{

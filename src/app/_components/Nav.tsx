@@ -18,21 +18,19 @@ function Nav() {
           <h1>Gallery</h1>
         </Link>
         <SignedIn>
-          <div className="mustbevisibleonlywhenthescreeniswiderthan542">
-            <div className="flex flex-row flex-nowrap gap-8 justify-center">
-              <Link href="/dashboard">Dashboard</Link>
-              <Link href="/forum">Forum</Link>
-            </div>
+          <div className="hidden flex-row flex-nowrap gap-8 justify-center md:flex">
+            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/forum">Forum</Link>
           </div>
           <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
-            <div className="mustbevisibleonlywhenthescreeniswiderthan542andthinerthan1344">
+            <div className="hidden md:block lg:hidden">
               <CustomUploadButton />
             </div>
-            <ThemeSwitcher className="mustbevisibleonlywhenthescreeniswiderthan542 descendants:size-[20px]" />
+            <ThemeSwitcher className="hidden md:block descendants:size-[20px]" />
 
             <BurgerMenu />
 
-            <div className="mustbevisibleonlywhenthescreeniswiderthan542 aspect-square w-[24px] h-[24px] descendants:w-full descendants:h-full">
+            <div className="hidden md:block aspect-square w-[24px] h-[24px] descendants:w-full descendants:h-full">
               <UserButton />
             </div>
           </div>

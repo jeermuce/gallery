@@ -11,6 +11,14 @@ export default withUt({
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      screens: {
+        sm: "542px",
+        md: "543px",
+        lg: "1345px",
+      },
+      rotate: {
+        rotate: "var(--rotate)",
+      },
       dropShadow: {
         Prem: "0 0px 1rem var(--primary-opacity)",
         Arem: "0 0px 1rem var(--accent-opacity)",
