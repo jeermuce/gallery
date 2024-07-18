@@ -47,7 +47,7 @@ function Footer() {
             href="https://gravatar.com/jeermuce"
             target="_blank"
             rel="noreferrer noopener"
-            className="size-8 descendants:size-8 p-0 m-0 "
+            className="p-0 m-0 size-8 descendants:size-8"
           >
             <img
               src="https://gravatar.com/userimage/239490451/8f9ca5674259da3762d4a6bca51fbb2c.jpeg?size=150"
