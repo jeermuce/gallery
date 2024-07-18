@@ -13,15 +13,15 @@ async function Gallery() {
 
   if (images.length > 1) {
     return (
-      <div className="max-w-[110rem] bg-transparent relative top-0 lg:grid lg:grid-cols-[15rem_1fr_15rem] flex-1">
-        <div className="bg-transparent hidden max-w-60 min-w-60 lg:block" />
+      <div className="relative top-0 flex-1 bg-transparent lg:grid max-w-[110rem] lg:grid-cols-[15rem_1fr_15rem]">
+        <div className="hidden bg-transparent lg:block max-w-60 min-w-60" />
         <div className="p-4 self-start gap-4 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] grid xl:w-[80rem]">
           {!!images &&
             images.map((item) => (
               <Link
                 href={`/img/${item?.id}`}
                 key={`${item?.key}`}
-                className="border border-text-DEFAULT-opacity hover:scale-[1.07] bg-black hover:z-50 z-59 overflow-hidden rounded-xl hover:rounded-none transition-all duration-500 ease-in-out"
+                className="overflow-hidden bg-black rounded-xl border transition-all duration-500 ease-in-out hover:z-50 hover:rounded-none border-text-DEFAULT-opacity z-59 hover:scale-[1.07]"
               >
                 <img
                   src={item?.url ?? "ERROR"}
@@ -29,13 +29,13 @@ async function Gallery() {
                   alt={item?.name ?? "ERROR"}
                   width={100}
                   height={100}
-                  className="opacity-85 hover:opacity-100 object-fill aspect-video w-full transform cursor-pointer transition-all"
+                  className="object-fill w-full transition-all transform cursor-pointer hover:opacity-100 opacity-85 aspect-video"
                 />
               </Link>
             ))}
         </div>
-        <div className="hidden lg:block max-w-60 min-w-60 mr-4">
-          <MyUploadDropzone className="hidden lg:block max-w-60 min-w-60 sticky top-16" />
+        <div className="hidden mr-4 lg:block max-w-60 min-w-60">
+          <MyUploadDropzone className="hidden sticky top-16 lg:block max-w-60 min-w-60" />
         </div>
       </div>
     );

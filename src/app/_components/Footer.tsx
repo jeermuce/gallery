@@ -5,9 +5,9 @@ function Footer() {
   return (
     <footer className=" shadow-[inset_0px_12px_50px_0px_var(--primary-opacity)] flex justify-center items-start py-12 w-full bg-background text-text">
       <div className="max-w-[80rem] w-[80%] flex flex-col gap-8 md:grid md:grid-cols-4 py-2 font-semibold">
-        <CustomUploadButton className="md:hidden block " />
+        <CustomUploadButton className="block md:hidden" />
 
-        <div className="flex flex-row flex-wrap md:flex-col  gap-8 justify-center md:justify-start items-center p-0">
+        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
           <Link
             href="/"
             className="flex flex-row flex-nowrap gap-2 items-center"
@@ -20,11 +20,11 @@ function Footer() {
             <h1>Gallery</h1>
           </Link>
         </div>
-        <div className="flex flex-row flex-wrap md:flex-col  gap-8 justify-center md:justify-start items-center p-0">
+        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
           <Link href="/dashboard">Dashboard</Link>
           <Link href="/forum">Forum</Link>
         </div>
-        <div className="flex flex-row flex-wrap md:flex-col  gap-8 justify-center md:justify-start items-center p-0">
+        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
           <a
             href="https://github.com/jeermuce/gallery"
             target="_blank"
