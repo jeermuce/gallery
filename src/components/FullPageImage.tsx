@@ -1,5 +1,4 @@
 import { clerkClient } from "@clerk/nextjs/server";
-import Image from "next/image";
 import { getImage } from "~/server/db/queries";
 
 export default async function PhotoModal(props: {
