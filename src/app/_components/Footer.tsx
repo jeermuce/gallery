@@ -11,7 +11,7 @@ function Footer() {
         <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
           <Link
             href="/"
-            className="flex flex-row flex-nowrap gap-2  items-center"
+            className="flex flex-row flex-nowrap gap-2 items-center"
           >
             <img
               src="https://i.imgur.com/FTAK7os.png"
@@ -49,7 +49,7 @@ function Footer() {
             href="https://gravatar.com/jeermuce"
             target="_blank"
             rel="noreferrer noopener"
-            className="size-8 overflow-hidden rounded-full transition-all duration-700 ease-in-out rotate-rotate"
+            className="overflow-hidden rounded-full transition-all duration-700 ease-in-out size-8 rotate-rotate"
           >
             <img
               src="https://gravatar.com/userimage/239490451/8f9ca5674259da3762d4a6bca51fbb2c.jpeg?size=150"
@@ -57,7 +57,7 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="flex  descendants:size-8  flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
+        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start descendants:size-8">
           <CustomUploadButton />
           <ThemeSwitch />
         </div>
