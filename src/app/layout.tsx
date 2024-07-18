@@ -53,15 +53,15 @@ export default function RootLayout({
             routerConfig={extractRouterConfig(ourFileRouter)}
           />
           <body className="flex flex-col min-h-screen overflow-x-clip bg-background">
-            <MyThemeProvider className="flex flex-col min-h-screen bg-transparent overflow-x-clip">
+            <MyThemeProvider className="flex justify-between flex-col min-h-screen bg-transparent overflow-x-clip">
               {/* <SentryFeedbackWidget /> */}
-              <main className="flex flex-col flex-1 justify-start items-center bg-background text-text">
-                <Nav />
+              <Nav />
+              <main className="flex flex-col flex-1 justify-start px-4 items-center bg-background text-text">
                 {children}
                 {modal}
                 <div id="modal-root" />
-                <Footer />
               </main>
+              <Footer />
             </MyThemeProvider>
           </body>
         </html>
