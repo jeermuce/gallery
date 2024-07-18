@@ -30,7 +30,11 @@ export default function ThemeSwitch(
         setTheme(() => (resolvedTheme === "dark" ? "light" : "dark"))
       }
     >
-      {resolvedTheme === "dark" ? <FiSun /> : <FiMoon />}
+      {resolvedTheme === "dark" ? (
+        <FiSun strokeWidth={1.5} />
+      ) : (
+        <FiMoon strokeWidth={1.5} />
+      )}
     </button>
   );
 }

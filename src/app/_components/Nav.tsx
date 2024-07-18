@@ -1,7 +1,7 @@
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
-import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
+import ThemeSwitch from "~/app/_components/ThemeSwitcher";
 import BurgerMenu from "./BurgerMenu";
 import CustomUploadButton from "./CustomUploadButton";
 
@@ -30,7 +30,7 @@ function Nav() {
               <div className="hidden md:block lg:hidden">
                 <CustomUploadButton />
               </div>
-              <ThemeSwitcher className="hidden md:block descendants:size-[20px]" />
+              <ThemeSwitch className="hidden md:block descendants:size-[20px]" />
 
               <BurgerMenu />
 

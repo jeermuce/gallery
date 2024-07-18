@@ -6,7 +6,7 @@ import ThemeSwitcher from "~/app/_components/ThemeSwitcher";
 
 const BurgerMenu = () => {
   return (
-    <div className="md:hidden descendants:transition-all aspect-square descendants:ease-in-out size-8 descendants:duration-300">
+    <div className=" descendants:no-scrollbar  md:hidden descendants:transition-all aspect-square descendants:ease-in-out size-8 descendants:duration-300">
       <input
         type="checkbox"
         defaultChecked={true}
@@ -25,15 +25,16 @@ const BurgerMenu = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          className="relative z-10 text-white rounded-full cursor-pointer hover:text-black hover:bg-secondary"
+          className="relative z-10 text-white  cursor-pointer hover:text-secondary"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-label="Menu"
         >
-          <line x1="3" y1="3" x2="21" y2="21" />
-          <line x1="3" y1="21" x2="21" y2="3" />
+          <title>Close</title>
+          <line x1="4" y1="4" x2="20" y2="20" />
+          <line x1="4" y1="20" x2="20" y2="4" />O
         </svg>
       </label>
       <label
@@ -67,13 +68,16 @@ const BurgerMenu = () => {
 
       <div className="flex fixed top-0 right-0 flex-col gap-2 justify-start items-end h-screen rounded-l-lg transition-all ease-in-out pointer-events-auto z-index-10 sidebar-container text-wrap bg-black/60 backdrop-blur-lg peer-checked/invisible:-right-full peer-checked/invisible:descendants:hidden peer-checked/invisible:peer-checked:duration-0 peer-checked/invisible:peer-checked:transition-none w-fit duration-400">
         <div className="flex overflow-y-scroll flex-col gap-2 justify-start items-center p-12 text-white bg-transparent">
-          <ThemeSwitcher className="absolute top-0 left-0 mt-2 ml-2 size-8 descendants:size-8" />
+          <div className="absolute flex  top-0 left-0  w-full  p-2 descendants:size-8">
+            <CustomUploadButton className="absolute left-1/2 -translate-x-1/2 " />
+            <ThemeSwitcher className="absolute" />
+          </div>
+
           <SignedIn>
             <UserButton />
             <Link href="/">Home</Link>
             <Link href="/forum">Forum</Link>
             <Link href="/dashboard">Dashboard</Link>
-            <CustomUploadButton />
           </SignedIn>
         </div>
       </div>

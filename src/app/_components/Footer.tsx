@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CustomUploadButton from "./CustomUploadButton";
+import ThemeSwitch from "./ThemeSwitcher";
 
 function Footer() {
   return (
@@ -55,6 +56,10 @@ function Footer() {
               alt="jeermuce"
             />
           </a>
+        </div>
+        <div className="flex  descendants:size-8  flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
+          <CustomUploadButton />
+          <ThemeSwitch />
         </div>
       </div>
     </footer>
