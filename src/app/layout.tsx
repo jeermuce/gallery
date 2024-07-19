@@ -55,7 +55,7 @@ export default function RootLayout({
           <body className="flex flex-col min-h-screen overflow-x-clip bg-background">
             <MyThemeProvider className="flex flex-col justify-between min-h-screen bg-transparent overflow-x-clip">
               <Nav />
-              <main className="flex flex-col flex-1 justify-start items-center p-4 bg-background text-text">
+              <main className="flex overflow-visible flex-col flex-1 justify-start items-center p-4 bg-background text-text">
                 <SentryFeedbackWidget />
                 {children}
                 {modal}

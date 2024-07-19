@@ -7,7 +7,7 @@ import CustomUploadButton from "./CustomUploadButton";
 
 function Nav() {
   return (
-    <nav className="flex sticky top-0 left-0 flex-row justify-center w-full bg-center animated-background z-[9999]">
+    <nav className="flex sticky top-0 left-0 flex-row justify-center w-full bg-center animated-background z-[500]">
       <div className="flex sticky top-0 left-0 flex-row justify-center w-full bg-transparent backdrop-blur-sm">
         <div className="w-full px-2  flex md:w-[80%] bg-transparent gap-2 max-w-[80rem] flex-row flex-nowrap items-center justify-between py-2 font-semibold">
           <Link
@@ -22,10 +22,6 @@ function Nav() {
             <h1>Gallery</h1>
           </Link>
           <SignedIn>
-            <div className="hidden flex-row flex-nowrap gap-8 justify-center md:flex">
-              <Link href="/dashboard">Dashboard</Link>
-              <Link href="/forum">Forum</Link>
-            </div>
             <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
               <div className="hidden md:block lg:hidden">
                 <CustomUploadButton />

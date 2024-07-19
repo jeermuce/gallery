@@ -5,13 +5,30 @@ import ThemeSwitch from "./ThemeSwitcher";
 function Footer() {
   return (
     <footer className=" shadow-[inset_0px_12px_50px_0px_var(--primary-opacity)] flex justify-center items-start py-12 w-full bg-background text-text">
-      <div className="max-w-[80rem] w-[80%] flex flex-col gap-8 md:grid md:grid-cols-4 py-2 font-semibold">
-        <CustomUploadButton className="block md:hidden" />
-
-        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
+      <div
+        className="
+      max-w-[80rem] 
+      child:flex 
+      child:flex-row 
+      child:md:flex-col 
+      child:items-center 
+      child:justify-center 
+      first:items-start
+      child:gap-8
+      w-[80%] 
+      flex 
+      flex-col 
+      gap-8 
+      md:grid 
+      md:grid-cols-3 
+      py-2 
+      font-semibold
+      "
+      >
+        <div>
           <Link
             href="/"
-            className="flex flex-row flex-nowrap gap-2 items-center"
+            className="flex flex-row flex-nowrap gap-2 justify-center items-center"
           >
             <img
               src="https://i.imgur.com/FTAK7os.png"
@@ -21,11 +38,7 @@ function Footer() {
             <h1>Gallery</h1>
           </Link>
         </div>
-        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/forum">Forum</Link>
-        </div>
-        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start">
+        <div>
           <a
             href="https://github.com/jeermuce/gallery"
             target="_blank"
@@ -57,7 +70,7 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="flex flex-row flex-wrap gap-8 justify-center items-center p-0 md:flex-col md:justify-start descendants:size-8">
+        <div className="descendants:size-8">
           <CustomUploadButton />
           <ThemeSwitch />
         </div>
