@@ -12,8 +12,8 @@ async function Gallery() {
 
   if (images.length > 1) {
     return (
-      <div className="relative top-0 flex-1 bg-transparent lg:grid max-w-[110rem] lg:grid-cols-[15rem_1fr_15rem] gap-4">
-        <div className="hidden bg-transparent lg:block  max-w-60 min-w-60" />
+      <div className="relative top-0 flex-1 gap-4 bg-transparent lg:grid max-w-[110rem] lg:grid-cols-[15rem_1fr_15rem]">
+        <div className="hidden bg-transparent lg:block max-w-60 min-w-60" />
         <div className="px-0   self-start gap-4 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] grid xl:w-[80rem]">
           {!!images &&
             images.map((item) => (

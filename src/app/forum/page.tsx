@@ -6,7 +6,7 @@ const page = () => {
       {/* Placeholder for forum posts */}
       <div className="mb-4">
         <h1 className="text-xl font-semibold">Posts</h1>
-        <ul className="list-disc pl-5">
+        <ul className="pl-5 list-disc">
           <li className="mb-2">Post 1 - Placeholder content</li>
           <li className="mb-2">Post 2 - Placeholder content</li>
           <li className="mb-2">Post 3 - Placeholder content</li>
@@ -28,7 +28,7 @@ const page = () => {
               rows={50}
               id="title"
               name="title"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+              className="block p-2 mt-1 w-full rounded-md border border-gray-300 shadow-sm"
               placeholder="Enter your post title"
             />
           </div>
@@ -42,14 +42,14 @@ const page = () => {
             <textarea
               id="content"
               name="content"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+              className="block p-2 mt-1 w-full rounded-md border border-gray-300 shadow-sm"
               rows={50}
               placeholder="Enter your post content"
             />
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            className="py-2 px-4 text-white bg-blue-500 rounded-md"
           >
             Submit
           </button>
