@@ -7,7 +7,7 @@ export default async function PhotoModal(props: {
 }) {
   const image = await getImage(props.id);
   if (!image) throw new Error("Image not found");
-  const uploaderInfo = await clerkClient.users.getUser(image.userId);
+  const uploaderInfo = await clerkClient().users.getUser(image.userId);
   return (
     <div
       className={`${props.className} flex flex-row border border-[#38383D] descendants:border-[#38383D] overflow-hidden max-h-4/5 backdrop-blur-sm`}
