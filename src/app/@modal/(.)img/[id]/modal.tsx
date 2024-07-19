@@ -26,6 +26,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   return createPortal(
     <dialog
+      id="image-modal"
       ref={dialogRef}
       onClose={onDismiss}
       className="flex flex-row justify-center items-center w-screen h-screen text-white bg-black/70 backdrop-blur-sm"
