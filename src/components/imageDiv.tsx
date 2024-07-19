@@ -19,7 +19,7 @@ function imageDiv(
       key={`${item?.key}`}
       className="relative z-10 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:z-20 hover:rounded-none hover:scale-110 descendants:transition-all descendants:duration-300 descendants:ease-in-out"
     >
-      <div className="absolute -top-2 -right-2 z-40 p-1 rounded-full hover:scale-150 bg-text text-background hover:z-[501] hover:bg-secondary">
+      <div className="absolute -top-2 -right-2 z-40 p-1 rounded-full hover:scale-150 bg-text text-bg hover:z-[501] hover:bg-s">
         <svg
           id="close-button"
           xmlns="http://www.w3.org/2000/svg"

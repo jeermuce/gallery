@@ -4,16 +4,17 @@ import ThemeSwitch from "./ThemeSwitcher";
 
 function Footer() {
   return (
-    <footer className=" shadow-[inset_0px_12px_50px_0px_var(--primary-opacity)] flex justify-center items-start py-12 w-full bg-background text-text">
+    <footer className=" shadow-[inset_0px_12px_50px_0px_var(--p-opacity)] flex justify-center items-center py-12 w-full bg-bg text-text">
       <div
         className="
+      items-center
+      md:items-start
+      justify-center
       max-w-[80rem] 
       child:flex 
       child:flex-row 
       child:md:flex-col 
-      child:items-center 
       child:justify-center 
-      first:items-start
       child:gap-8
       w-[80%] 
       flex 
@@ -25,7 +26,7 @@ function Footer() {
       font-semibold
       "
       >
-        <div>
+        <div className="items-center">
           <Link
             href="/"
             className="flex flex-row flex-nowrap gap-2 justify-center items-center"
@@ -38,7 +39,7 @@ function Footer() {
             <h1>Gallery</h1>
           </Link>
         </div>
-        <div>
+        <div className="items-center">
           <a
             href="https://github.com/jeermuce/gallery"
             target="_blank"
@@ -70,7 +71,7 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="descendants:size-8">
+        <div className="items-center descendants:size-8">
           <CustomUploadButton />
           <ThemeSwitch />
         </div>

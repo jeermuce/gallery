@@ -17,7 +17,7 @@ function MyUploadDropzone(
           onClientUploadComplete={() => router.refresh()}
           appearance={{
             container: {
-              color: "var(--background)",
+              color: "var(--bg)",
               background: "var(--text)",
               margin: "0",
               padding: "1rem",
@@ -28,12 +28,12 @@ function MyUploadDropzone(
             button: {
               height: "3rem",
               color: "var(--text)",
-              background: "var(--background)",
+              background: "var(--bg)",
               fontWeight: "bold",
             },
             label: {
               width: "100%",
-              color: "var(--background)",
+              color: "var(--bg)",
               fontWeight: "bold",
             },
           }}

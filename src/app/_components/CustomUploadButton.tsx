@@ -14,7 +14,7 @@ function CustomUploadButton(
   });
 
   return (
-    <div className={`${props.className}  descendants:hover:text-primary `}>
+    <div className={`${props.className}  descendants:hover:text-p `}>
       <label htmlFor="upload-input" className="cursor-pointer select-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"

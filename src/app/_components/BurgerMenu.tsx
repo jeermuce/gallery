@@ -15,7 +15,7 @@ const BurgerMenu = () => {
       />
       <label
         htmlFor="sidebar-toggle"
-        className="block rounded-full cursor-pointer peer-checked/invisible:hidden size-8 descendants:size-8 hover:text-secondary"
+        className="block rounded-full cursor-pointer peer-checked/invisible:hidden size-8 descendants:size-8 hover:text-s"
       >
         <svg
           id="close-button"
@@ -25,7 +25,7 @@ const BurgerMenu = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          className="relative z-10 text-white cursor-pointer hover:text-secondary"
+          className="relative z-10 text-white cursor-pointer hover:text-s"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
@@ -39,13 +39,13 @@ const BurgerMenu = () => {
       </label>
       <label
         htmlFor="sidebar-toggle"
-        className="hidden rounded-full cursor-pointer peer-checked/invisible:block size-8 descendants:size-8 hover:text-secondary"
+        className="hidden rounded-full cursor-pointer peer-checked/invisible:block size-8 descendants:size-8 hover:text-s"
       >
         <svg
           id="open-button"
           xmlns="http://www.w3.org/2000/svg"
           role="menu"
-          className="rounded-full cursor-pointer text-text hover:bg-text hover:text-background"
+          className="rounded-full cursor-pointer text-text hover:bg-text hover:text-bg"
           width="24"
           height="24"
           viewBox="0 0 24 24"
