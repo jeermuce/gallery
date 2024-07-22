@@ -40,14 +40,14 @@ export default withUt({
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "hsl(var(--bg))",
+        foreground: "hsl(var(--text))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--p))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "hsl(var(--s))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -59,7 +59,7 @@ export default withUt({
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--a))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -71,39 +71,14 @@ export default withUt({
           foreground: "hsl(var(--card-foreground))",
         },
         github: {
-          bg: "var(--github-bg)",
-          tx: "var(--github-tx)",
+          bg: "hsl(var(--github-bg))",
+          tx: "hsl(var(--github-tx))",
         },
-        text: {
-          DEFAULT: {
-            DEFAULT: "var(--text)",
-            opacity: "var(--text-opacity)",
-          },
-        },
-        bg: {
-          DEFAULT: {
-            DEFAULT: "var(--bg)",
-            opacity: "var(--bg-opacity)",
-          },
-        },
-        p: {
-          DEFAULT: {
-            DEFAULT: "var(--p)",
-            opacity: "var(--p-opacity)",
-          },
-        },
-        s: {
-          DEFAULT: {
-            DEFAULT: "var(--s)",
-            opacity: "var(--s-opacity)",
-          },
-        },
-        a: {
-          DEFAULT: {
-            opacity: "var(--a-opacity)",
-            DEFAULT: "var(--a)",
-          },
-        },
+        text: "hsl(var(--text))",
+        bg: "hsl(var(--bg))",
+        p: "hsl(var(--p))",
+        s: "hsl(var(--s))",
+        a: "hsl(var(--a))",
       },
       borderRadius: {
         lg: "var(--radius)",

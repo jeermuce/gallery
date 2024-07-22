@@ -4,7 +4,7 @@ import ThemeSwitch from "./ThemeSwitcher";
 
 function Footer() {
   return (
-    <footer className=" shadow-[inset_0px_12px_50px_0px_var(--p-opacity)] flex justify-center items-center py-12 w-full bg-bg text-text">
+    <footer className=" shadow-[inset_0px_12px_50px_0px_var(--p)] flex justify-center items-center py-12 w-full bg-bg text-text">
       <div
         className="
       items-center

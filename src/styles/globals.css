@@ -31,18 +31,13 @@
 
     --rotate: 0deg;
 
-    --github-tx: #ffffff;
-    --github-bg: #000000;
-    --text: #E4E4E4;
-    --text-opacity: #e4e4e480;
-    --bg: #040404;
-    --bg-opacity: rgba(4, 4, 4, 0.9);
-    --p: rgb(50, 133, 179);
-    --p-opacity: rgba(48, 146, 199, 0.1);
-    --s: rgb(159, 20, 20);
-    --s-opacity: rgba(159, 20, 20, 0.1);
-    --a: rgb(255, 240, 154);
-    --a-opacity: rgba(255, 240, 154, 0.1);
+    --github-tx: 0, 0%, 100%;
+    --github-bg: 0, 0%, 0%;
+    --text: 0, 0%, 89%;
+    --bg: 0, 0%, 2%;
+    --p: 201, 56%, 45%;
+    --s: 0, 78%, 35%;
+    --a: 51, 100%, 80%;
 
   }
 
@@ -75,20 +70,13 @@
     --chart-5: 27 87% 67%;
 
     --rotate: 180deg;
-    --github-bg: #ffffff;
-    --github-tx: #000000;
-    --bg: #e4e4e4;
-    --bg-opacity: rgba(228, 228, 228, 0.9);
-    --text: #040404;
-    --text-opacity: #04040480;
-
-    --p: rgb(51, 123, 161);
-    --p-opacity: rgba(48, 146, 199, 0.1);
-
-    --s: rgb(255, 108, 108);
-    --s-opacity: rgba(255, 108, 108, 0.1);
-    --a: rgb(255, 240, 154);
-    --a-opacity: rgba(255, 240, 154, 0.1);
+    --github-bg: 0, 0%, 100%;
+    --github-tx: 0, 0%, 0%;
+    --bg: 0, 0%, 89%;
+    --text: 0, 0%, 2%;
+    --p: 201, 52%, 42%;
+    --s: 0, 100%, 71%;
+    --a: 51, 100%, 80%;
 
   }
 }
@@ -136,10 +124,13 @@ dialog {
 
 
   .animated-background {
-    --size: 2rem;
+
+    --size: 1.5rem;
     /* control the size */
-    --c1: var(--p-opacity);
-    --c2: var(--bg-opacity);
+
+    --c1: hsla(var(--primary) /0.33);
+    --c2: hsla(var(--background) / 0.33);
+    --coollor: hsla(300, 45%, 18%, 0.616);
 
     --_s: calc(2*var(--size)) calc(2*var(--size));
     --_g: var(--_s) conic-gradient(at 40% 40%, #0000 75%, var(--c1) 0);
