@@ -1,30 +1,44 @@
 "use client";
 import { useRouter } from "next/navigation";
 import type React from "react";
+import { useEffect } from "react";
+
 import { toast } from "sonner";
+import LoadingSVG from "~/components/LoadingSVG";
 import { useUploadThingInputProps } from "~/utils/use-uploadthing-input-props";
+
 const MaxFileSize = process.env.MAX_FILE_SIZE || "4MB";
 const MaxFiles = process.env.MAX_FILES || 10;
+
 function CustomUploadButton(
   props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   const router = useRouter();
   const { inputProps } = useUploadThingInputProps("imageUploader", {
-    onUploadBegin() {
-      toast("Uploading image...", {
-        duration: 1000000,
-        id: "upload-begin",
-      });
-    },
     onClientUploadComplete() {
       router.refresh();
       toast.dismiss("upload-begin");
-      toast.success("Image uploaded successfully");
+      toast.success("Upload successful");
+    },
+    onUploadBegin() {
+      toast(
+        <div className="flex gap-2 items-center text-lg text-primary">
+          <LoadingSVG /> Uploading...
+        </div>,
+        {
+          duration: 1000000,
+          id: "upload-begin",
+        },
+      );
     },
     onUploadError() {
-      toast.error(`Error uploading images
-        MaxSize: ${MaxFileSize}
-        MaxFiles:${MaxFiles}`);
+      toast.error(
+        <div>
+          <h1>Error uploading images</h1>
+          <p>MaxSize:{MaxFileSize}</p>
+          <p>MaxFiles:{MaxFiles}</p>
+        </div>,
+      );
     },
   });
 

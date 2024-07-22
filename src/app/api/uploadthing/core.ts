@@ -3,9 +3,11 @@ import { type FileRouter, createUploadthing } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { db } from "~/server/db";
 import { images } from "~/server/db/schema";
+
 type PowOf2 = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024;
 type SizeUnit = "B" | "KB" | "MB" | "GB";
 export type FileSize = `${PowOf2}${SizeUnit}`;
+
 const maxFileSize: FileSize = (process.env.MAX_FILE_SIZE || "4MB") as FileSize;
 const maxFiles = Number(process.env.MAX_FILES || 10);
 

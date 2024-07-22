@@ -8,9 +8,9 @@ import { extractRouterConfig } from "uploadthing/server";
 import Footer from "~/app/_components/Footer";
 import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import { Toaster } from "~/components/ui/sonner";
 import { MyThemeProvider } from "./my-theme-provider";
 import SentryFeedbackWidget from "./sentry-feedback-widget";
-import { Toaster } from "~/components/ui/sonner";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",

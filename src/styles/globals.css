@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.spinner_7WDj {
+  transform-origin: center;
+  animation: spinner_PBVY .75s linear infinite
+}
+
+@keyframes spinner_PBVY {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
 @layer base {
   :root {
     --background: 222.2 84% 4.9%;
@@ -111,7 +122,6 @@ dialog {
   padding: 0;
   box-sizing: border-box;
   border-radius: 0;
-  text-align: center;
 }
 
 
