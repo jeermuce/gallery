@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { UploadDropzone } from "~/utils/uploadthing";
 
 function MyUploadDropzone(
@@ -14,7 +15,10 @@ function MyUploadDropzone(
     <>
       <div className={`${props.className}`}>
         <UploadDropzone
-          onClientUploadComplete={() => router.refresh()}
+          onClientUploadComplete={() => {
+            router.refresh();
+            toast("Image uploaded successfully");
+          }}
           appearance={{
             container: {
               color: "var(--bg)",

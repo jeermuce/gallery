@@ -3,13 +3,20 @@ import { type FileRouter, createUploadthing } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { db } from "~/server/db";
 import { images } from "~/server/db/schema";
+type PowOf2 = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024;
+type SizeUnit = "B" | "KB" | "MB" | "GB";
+export type FileSize = `${PowOf2}${SizeUnit}`;
+const maxFileSize: FileSize = (process.env.MAX_FILE_SIZE || "4MB") as FileSize;
+const maxFiles = Number(process.env.MAX_FILES || 10);
 
 const f = createUploadthing();
 
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
-  imageUploader: f({ image: { maxFileSize: "4MB", maxFileCount: 10 } })
+  imageUploader: f({
+    image: { maxFileSize: maxFileSize, maxFileCount: maxFiles },
+  })
     // Set permissions and file types for this FileRoute
     .middleware(async ({ req }) => {
       // This code runs on your server before upload

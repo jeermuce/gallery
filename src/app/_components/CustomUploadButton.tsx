@@ -1,15 +1,30 @@
 "use client";
 import { useRouter } from "next/navigation";
 import type React from "react";
+import { toast } from "sonner";
 import { useUploadThingInputProps } from "~/utils/use-uploadthing-input-props";
-
+const MaxFileSize = process.env.MAX_FILE_SIZE || "4MB";
+const MaxFiles = process.env.MAX_FILES || 10;
 function CustomUploadButton(
   props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   const router = useRouter();
   const { inputProps } = useUploadThingInputProps("imageUploader", {
+    onUploadBegin() {
+      toast("Uploading image...", {
+        duration: 1000000,
+        id: "upload-begin",
+      });
+    },
     onClientUploadComplete() {
       router.refresh();
+      toast.dismiss("upload-begin");
+      toast.success("Image uploaded successfully");
+    },
+    onUploadError() {
+      toast.error(`Error uploading images
+        MaxSize: ${MaxFileSize}
+        MaxFiles:${MaxFiles}`);
     },
   });
 

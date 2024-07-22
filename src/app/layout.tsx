@@ -10,6 +10,7 @@ import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 import { MyThemeProvider } from "./my-theme-provider";
 import SentryFeedbackWidget from "./sentry-feedback-widget";
+import { Toaster } from "~/components/ui/sonner";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
@@ -61,6 +62,7 @@ export default function RootLayout({
                 {modal}
                 <div id="modal-root" />
               </main>
+              <Toaster />
               <Footer />
             </MyThemeProvider>
           </body>
