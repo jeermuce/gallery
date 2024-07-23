@@ -1,13 +1,15 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import { getImage } from "~/server/db/queries";
+import DeleteButton from "./deleteButton";
 
 export default async function PhotoModal(props: {
   id: number;
   className?: string;
 }) {
   const image = await getImage(props.id);
-  if (!image) throw new Error("Image not found");
+
   const uploaderInfo = await clerkClient().users.getUser(image.userId);
+
   return (
     <div
       className={`${props.className} flex flex-row border border-[#38383D] descendants:border-[#38383D] overflow-hidden max-h-4/5 backdrop-blur-sm`}
@@ -25,7 +27,7 @@ export default async function PhotoModal(props: {
           className="object-contain flex-shrink-0 max-w-full max-h-full w-fit"
         />
       </a>
-
+      <DeleteButton id={`${props.id} `} className="absolute right-0 top-0" />
       <div className="min-h-full border-l min-w-[12rem]">
         <div className="justify-start items-start h-full flexflex-col">
           <div className="p-2 w-full text-lg font-bold text-center border-b">

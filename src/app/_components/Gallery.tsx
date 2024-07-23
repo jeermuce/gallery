@@ -11,7 +11,7 @@ async function Gallery() {
 
   //empty
 
-  if (images.length > 1) {
+  if (images.length > 0) {
     return (
       <div className="relative top-0 flex-1 gap-4 bg-transparent lg:grid max-w-[110rem] lg:grid-cols-[15rem_1fr_15rem]">
         <div className="hidden bg-transparent lg:block max-w-60 min-w-60" />

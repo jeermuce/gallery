@@ -1,6 +1,10 @@
 import "server-only";
 import { auth } from "@clerk/nextjs/server";
+import { and, eq } from "drizzle-orm";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { db } from ".";
+import { images } from "./schema";
 
 export function getImages() {
   const user = auth();
@@ -11,13 +15,23 @@ export function getImages() {
   });
 }
 
-export function getImage(id: number) {
+export async function getImage(id: number) {
   const user = auth();
   if (!user.userId) throw new Error("Unauthorized");
-  const image = db.query.images.findFirst({
+  const image = await db.query.images.findFirst({
     where: (model, { eq }) => eq(model.id, id),
   });
 
-  if (!image) throw new Error("Image not found");
   return image;
+}
+
+export async function deleteImage(id: number) {
+  const user = auth();
+  if (!user.userId) throw new Error("Unauthorized");
+
+  await db
+    .delete(images)
+    .where(and(eq(images.id, id), eq(images.userId, user.userId)));
+  revalidatePath("/");
+  redirect("/");
 }
