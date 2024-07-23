@@ -7,6 +7,7 @@ import { createPortal } from "react-dom";
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const dialogRef = useRef<ElementRef<"dialog">>(null);
+
   const modalRoot = document.getElementById("modal-root");
   if (!modalRoot) {
     // Handle the case where the modal root doesn't exist.
@@ -17,11 +18,13 @@ export function Modal({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!dialogRef.current?.open) {
       dialogRef.current?.showModal();
+      document.body.classList.add("modal-open"); // Add this line
     }
   }, []);
 
   function onDismiss() {
     router.back();
+    document.body.classList.remove("modal-open"); // Add this line
   }
 
   return createPortal(

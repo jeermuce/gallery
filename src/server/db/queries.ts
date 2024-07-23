@@ -22,6 +22,9 @@ export async function getImage(id: number) {
     where: (model, { eq }) => eq(model.id, id),
   });
 
+  if (!image) {
+    return null;
+  }
   return image;
 }
 
@@ -32,6 +35,7 @@ export async function deleteImage(id: number) {
   await db
     .delete(images)
     .where(and(eq(images.id, id), eq(images.userId, user.userId)));
-  revalidatePath("/");
+
+  console.log("image deleted");
   redirect("/");
 }
