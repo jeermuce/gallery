@@ -42,7 +42,7 @@ export default function RootLayout({
         <html
           lang="en"
           suppressHydrationWarning
-          className={`${GeistSans.variable} h-full w-full p-0`}
+          className={`${GeistSans.variable} h-fit w-full p-0`}
         >
           <NextSSRPlugin
             /**
