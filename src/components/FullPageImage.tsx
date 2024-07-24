@@ -1,8 +1,6 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import { getImage } from "~/server/db/queries";
 import DeleteButton from "./deleteButton";
-import { redirect } from "next/navigation";
-import { revalidatePath } from "next/cache";
 
 export default async function PhotoModal(props: {
   id: number;

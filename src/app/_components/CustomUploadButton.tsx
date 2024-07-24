@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import type React from "react";
-import { useEffect } from "react";
 
 import { toast } from "sonner";
 import LoadingSVG from "~/components/LoadingSVG";

@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { db } from "~/server/db";
+import MyUploadDropzone from "./MyUploadDropzone";
+import MyUploader from "./MyUploader";
 
 import imageDiv from "~/components/imageDiv";
 import { getImages } from "~/server/db/queries";
-import MyUploadDropzone from "./MyUploadDropzone";
-import MyUploader from "./MyUploader";
 
 async function Gallery() {
   const images = await getImages();

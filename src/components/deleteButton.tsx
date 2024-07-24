@@ -1,4 +1,3 @@
-import { Children } from "react";
 import { deleteImage } from "~/server/db/queries";
 import { Button } from "./ui/button";
 interface DeleteButtonProps

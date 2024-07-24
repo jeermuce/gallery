@@ -10,7 +10,7 @@ import Nav from "~/app/_components/Nav";
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 import { Toaster } from "~/components/ui/sonner";
 import { MyThemeProvider } from "./my-theme-provider";
-import SentryFeedbackWidget from "./sentry-feedback-widget";
+//import SentryFeedbackWidget from "./sentry-feedback-widget";
 export const metadata = {
   title: process.env.NEXT_PUBLIC_SITE_NAME,
   description: "Image Gallery",
@@ -54,17 +54,17 @@ export default function RootLayout({
             routerConfig={extractRouterConfig(ourFileRouter)}
           />
           <body className="flex flex-col min-h-screen overflow-x-clip bg-bg">
-            <MyThemeProvider className="flex flex-col justify-between min-h-screen bg-transparent overflow-x-clip">
+            <MyThemeProvider className="flex flex-col min-h-screen bg-transparent overflow-x-clip">
               <Nav />
               <main className="flex overflow-visible flex-col flex-1 justify-start items-center p-4 bg-bg text-text">
-                <SentryFeedbackWidget />
+                {/* <SentryFeedbackWidget /> */}
                 {children}
                 {modal}
-                <div id="modal-root" />
               </main>
-              <Toaster />
               <Footer />
+              <Toaster />
             </MyThemeProvider>
+            <div id="modal-root" />
           </body>
         </html>
       </ClerkProvider>
