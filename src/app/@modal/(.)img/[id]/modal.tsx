@@ -18,13 +18,11 @@ export function Modal({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!dialogRef.current?.open) {
       dialogRef.current?.showModal();
-      document.body.classList.add("modal-open"); // Add this line
     }
   }, []);
 
   function onDismiss() {
     router.back();
-    document.body.classList.remove("modal-open"); // Add this line
   }
 
   return createPortal(
@@ -32,11 +30,11 @@ export function Modal({ children }: { children: React.ReactNode }) {
       id="image-modal"
       ref={dialogRef}
       onClose={onDismiss}
-      className="flex flex-row justify-center items-center w-screen h-screen text-white bg-black/70 backdrop-blur-sm"
+      className="h-full w-full flex flex-row justify-center items-center bg-black/70"
     >
       <div
-        className="fixed top-0 left-0 w-screen h-screen bg-transparent"
         onMouseDown={onDismiss}
+        className="h-full w-full absolute top-0 left-0"
       />
       {children}
     </dialog>,
