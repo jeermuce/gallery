@@ -30,7 +30,6 @@ export default async function PhotoModal(props: {
           className="object-contain flex-shrink-0 max-w-full max-h-full w-fit"
         />
       </a>
-      <DeleteButton id={`${props.id} `} className="absolute top-0 right-0" />
       <div className="min-h-full border-l min-w-[12rem]">
         <div className="justify-start items-start h-full flexflex-col">
           <div className="p-2 w-full text-lg font-bold text-center border-b">
@@ -41,6 +40,7 @@ export default async function PhotoModal(props: {
             <span>{uploaderInfo.firstName}</span>
             <span>Uploaded On: </span>
             <span>{new Date(image.createdAt).toLocaleDateString()}</span>
+      <DeleteButton id={`${props.id} `} className="mx-auto w-4/5 rounded-full overflow-hidden border-none" />
           </div>
         </div>
       </div>

@@ -20,10 +20,7 @@ function imageDiv(
       key={`${item?.key}`}
       className="relative z-10 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:z-20 hover:rounded-none hover:scale-110 descendants:transition-all descendants:duration-300 descendants:ease-in-out"
     >
-      <DeleteButton
-        className="absolute top-0 right-0 z-40 p-1 rounded-full size-6 1 hover:z-[501]"
-        id={`${item?.id}`}
-      />
+
       <Link
         href={`/${target}/${item?.id}`}
         key={`${item?.key}`}

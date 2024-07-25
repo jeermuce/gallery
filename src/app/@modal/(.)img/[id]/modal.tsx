@@ -30,13 +30,16 @@ export function Modal({ children }: { children: React.ReactNode }) {
       id="image-modal"
       ref={dialogRef}
       onClose={onDismiss}
-      className="h-full w-full flex flex-row justify-center items-center bg-black/70"
+      className="h-full w-full  bg-black/70"
     >
       <div
         onMouseDown={onDismiss}
         className="h-full w-full absolute top-0 left-0"
       />
+      <div className="h-full w-full flex flex-row justify-center items-center">
+
       {children}
+      </div>
     </dialog>,
     modalRoot,
   );

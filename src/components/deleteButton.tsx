@@ -12,12 +12,13 @@ function DeleteButton(props: DeleteButtonProps) {
         "use server";
         await deleteImage(Number(props.id));
       }}
-      className="flex justify-center w-full"
+     className={`${props.className} overflow-hidden`}
     >
       <Button
         variant="destructive"
         type="submit"
-        className={`${props.className} `}
+        className="size-full"
+        
       >
         <svg
           id="close-button"
@@ -32,6 +33,7 @@ function DeleteButton(props: DeleteButtonProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-label="Menu"
+          className=" relative"
         >
           <title>Delete</title>
           <path
