@@ -13,22 +13,11 @@ The codebase from Theo's T3 App Router Tutorial on YouTube
 - [x] Add image upload
 - [x] Connect users to images
 - [x] Add server-only queries
-- [ ] Use Next/Image component
 - [x] Error management (w/ Sentry)
 - [x] Routing/image page (parallel route)
 - [x] Update upload button to be less cringe
 - [x] ShadUI
-- [ ] Analytics (posthog)
-- [ ] Delete button (w/ Server Actions)
-- [ ] Ratelimiting (upstash)
-
-A challenge
-
-- [ ] Fix the page layout for images of different resolutions
-- [ ] "Selecting" images on the gallery page
-- [ ] "infinite scroll"
-- [ ] Folders/albums
-
+- [x] Delete button (w/ Server Actions)
 ```bash
 bun install
 ```
