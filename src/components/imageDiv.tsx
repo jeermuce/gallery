@@ -18,7 +18,7 @@ function imageDiv(
   return (
     <div
       key={`${item?.key}`}
-      className="relative z-10 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:z-20 hover:rounded-none hover:scale-110 descendants:transition-all descendants:duration-300 descendants:ease-in-out"
+      className="imagediv  mb-4 relative z-10 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:z-20 hover:rounded-none  hover:scale-110 descendants:transition-all descendants:duration-300 descendants:ease-in-out"
     >
 
       <Link
@@ -32,7 +32,7 @@ function imageDiv(
           alt={item?.name ?? "ERROR"}
           width={100}
           height={100}
-          className="object-fill w-full rounded-xl transition-all transform cursor-pointer hover:rounded-none hover:opacity-100 opacity-85 aspect-video"
+          className="object-fill w-full rounded-xl border-solid border-accent transition-all transform cursor-pointer hover:rounded-none hover:opacity-100 opacity-85 "
         />
       </Link>
     </div>

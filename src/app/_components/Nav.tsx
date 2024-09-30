@@ -23,7 +23,7 @@ function Nav() {
           </Link>
           <SignedIn>
             <div className="flex flex-row flex-nowrap gap-8 justify-center items-center">
-              <div className="hidden md:block lg:hidden">
+              <div className="hidden md:block lg:block">
                 <CustomUploadButton />
               </div>
               <ThemeSwitch className="hidden md:block descendants:size-[20px]" />

@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after,
+*::placeholder {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    min-height: 0;
+    min-width: 0;
+    letter-spacing: inherit;
+    font: inherit;
+    border: none;
+    max-width: 100%;
+    font-size: clamp(16px, 2vw, 24px);
+    box-decoration-break: clone;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(173, 53, 53, 0.489);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+body {
+    transition: none;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+/* img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+} */
+
+html {
+    color-scheme: dark light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+    max-width: 80ch;
+    word-break: keep-all;
+    text-wrap: pretty;
+}
+
+main {
+    width: 100%;
+    max-width: 1024px;
+    flex: 1 1 0%;
+
+}
+
+
+/* button {
+    border-radius: 4px;
+    border: solid 1px black;
+    padding: 2rem;
+    width: fit-content;
+    cursor: pointer;
+} */
+
+input:user-invalid {
+    outline: solid 4px red;
+    outline-offset: -4px;
+}
+
+input:user-valid {
+    outline: solid 4px green;
+    outline-offset: -4px;
+}
+
+
+input,
+textarea,
+select,
+button {
+    font-size: 16px;
+    transition: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(8rem, 100%), 1fr));
+    gap: 1rem;
+
+}

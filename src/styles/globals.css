@@ -1,6 +1,21 @@
+@import url(reset.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.imagediv:hover {
+  box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.73);
+  -webkit-box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.73);
+  -moz-box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.73);
+}
+
+.imagediv {
+  border: solid 1px hsl(var(--border));
+}
+
+main {
+  @apply mx-auto
+}
 
 .spinner_7WDj {
   transform-origin: center;
